@@ -1,0 +1,15 @@
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\NLog.config
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\ExitTask.Infrastructure.dll.config
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\ExitTask.Infrastructure.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\ExitTask.Infrastructure.pdb
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\ExitTask.Domain.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\NLog.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\ExitTask.Domain.pdb
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\bin\Debug\NLog.xml
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.pdb

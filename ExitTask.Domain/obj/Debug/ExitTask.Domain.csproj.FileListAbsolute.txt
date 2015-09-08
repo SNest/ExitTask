@@ -1,0 +1,5 @@
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Domain\obj\Debug\ExitTask.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Domain\bin\Debug\ExitTask.Domain.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Domain\bin\Debug\ExitTask.Domain.pdb
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Domain\obj\Debug\ExitTask.Domain.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Domain\obj\Debug\ExitTask.Domain.pdb
