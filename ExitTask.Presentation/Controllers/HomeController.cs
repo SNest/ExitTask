@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace ExitTask.Presentation.Controllers
 {
+    using System.Collections.Generic;
+
+    using AutoMapper;
+
+    using ExitTask.Application.ApplicationServices.Abstract;
+    using ExitTask.Presentation.Models;
+
     public class HomeController : Controller
     {
-        // GET: Home
+        private readonly ITourService tourService;
+
+        public HomeController(ITourService tourService)
+        {
+            this.tourService = tourService;
+        }
         public ActionResult Index()
         {
-            return this.View();
+            return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours()));
         }
     }
 }

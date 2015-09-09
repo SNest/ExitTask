@@ -5,10 +5,10 @@
     using ExitTask.Domain.Abstract.Repositories;
     using ExitTask.Domain.Entities.Abstract;
 
-    public interface IUnitOfWork<TEntity, in TPrimaryKey> : IDisposable
-        where TEntity : class, IEntity<TPrimaryKey>
+    public interface IUnitOfWork : IDisposable
+
     {
-        IRepository<TEntity, TPrimaryKey> Entities { get; }
+        IRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>;
 
         void Commit();
     }

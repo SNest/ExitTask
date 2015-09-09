@@ -8,12 +8,9 @@
     using ExitTask.Infrastructure.Concrete.Repositories;
     using ExitTask.Infrastructure.Context.Abstract;
 
-    internal class EfUnitOfWork<TEntity, TPrimaryKey> : IUnitOfWork<TEntity, TPrimaryKey>
-        where TEntity : class, IEntity<TPrimaryKey>
+    public class EfUnitOfWork : IUnitOfWork
     {
         private bool disposed;
-
-        private IRepository<TEntity, TPrimaryKey> entityRepository;
 
         private readonly IContext db;
 
@@ -22,13 +19,10 @@
             this.db = db;
         }
 
-        public IRepository<TEntity, TPrimaryKey> Entities
+        public IRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>
         {
-            get
-            {
-                return this.entityRepository
-                       ?? (this.entityRepository = new EfRepository<TEntity, TPrimaryKey>(this.db));
-            }
+            IRepository<TEntity, TPrimaryKey> entityRepository = new EfRepository<TEntity, TPrimaryKey>(this.db);
+            return entityRepository;
         }
 
         public void Commit()
