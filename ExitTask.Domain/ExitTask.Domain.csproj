@@ -50,8 +50,12 @@
     <Compile Include="Entities\Concrete\Comment.cs" />
     <Compile Include="Entities\Concrete\Country.cs" />
     <Compile Include="Entities\Abstract\Entity.cs" />
+    <Compile Include="Entities\Concrete\Enums\Feeding.cs" />
+    <Compile Include="Entities\Concrete\Enums\FileType.cs" />
     <Compile Include="Entities\Concrete\Enums\Role.cs" />
     <Compile Include="Entities\Abstract\IEntity.cs" />
+    <Compile Include="Entities\Concrete\Enums\TourState.cs" />
+    <Compile Include="Entities\Concrete\Picture.cs" />
     <Compile Include="Entities\Concrete\Route.cs" />
     <Compile Include="Entities\Concrete\Enums\Sex.cs" />
     <Compile Include="Entities\Concrete\Tour.cs" />

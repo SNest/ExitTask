@@ -1,18 +1,56 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿body { }
+
+html {
+    height: auto;
+    min-height: 100%;
+    position: relative;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.mdl-layout__content {
+    padding-top: 150px;
+
+}
+.page-content {
+    margin: 0 auto;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
-textarea {
-    max-width: 280px;
+textarea { max-width: 280px; }
+
+.demo-layout-transparent { background: url('../Views/../Content/Images/airplane2.png') center/cover; }
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button { color: white; }
+
+.mdl-cell { background: firebrick; }
+
+footer {
+    background-color: black;
+    bottom: 0;
+    color: white;
+    height: 10px;
+    position: absolute;
+    width: 100%;
 }
 
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v7/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    word-wrap: normal;
+}

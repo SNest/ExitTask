@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace ExitTask.Domain.Entities.Abstract
+﻿namespace ExitTask.Domain.Entities.Abstract
 {
+    using System;
+
     interface IAuditableEntity
     {
         DateTime CreatedDate { get; set; }

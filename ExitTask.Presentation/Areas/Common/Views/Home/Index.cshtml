@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
+
+@{
+    this.ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @(this.Html.ActionLink("Create New", "Create"))
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.Name))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.Description))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.Type))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.Price))
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in this.Model) {
+    <tr>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.Name))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.Description))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.Type))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.Price))
+        </td>
+        <td>
+            @(this.Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })) |
+            @(this.Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })) |
+            @(this.Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }))
+        </td>
+    </tr>
+}
+
+</table>

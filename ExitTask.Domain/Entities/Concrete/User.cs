@@ -6,7 +6,7 @@
     using ExitTask.Domain.Entities.Abstract;
     using ExitTask.Domain.Entities.Concrete.Enums;
 
-    public class User : AuditableEntity<int>
+    public class User : Entity<int>
     {
         [Required]
         public string FirstName { get; set; }
@@ -23,5 +23,6 @@
         public Guid? CityId { get; set; }
 
         public virtual City City { get; set; }
+        public virtual Picture Avatar { get; set; }
     }
 }

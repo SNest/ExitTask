@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     using ExitTask.Domain.Entities.Abstract;
 
@@ -10,6 +9,7 @@
     {
         public Route()
         {
+            this.Tours = new HashSet<Tour>();
             this.Cities = new HashSet<City>();
         }
 
@@ -19,8 +19,7 @@
         [Required]
         public string Description { get; set; }
 
-        [ForeignKey("Id")]
-        public virtual Tour Tour { get; set; }
+        public virtual ICollection<Tour> Tours { get; set; }
 
         public virtual ICollection<City> Cities { get; set; }
     }

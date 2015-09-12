@@ -57,6 +57,7 @@
     <Compile Include="Context\Abstract\IContext.cs" />
     <Compile Include="Context\Concrete\ContextInitializer.cs" />
     <Compile Include="Context\Concrete\EfContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Concrete\DomainServices\" />
+    <Folder Include="Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

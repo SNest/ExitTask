@@ -1,7 +1,6 @@
 ﻿namespace ExitTask.Application.DTOs.Abstract
 {
-    public interface IOutputDto
+    public interface IOutputDto 
     {
-         
     }
 }

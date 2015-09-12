@@ -8,6 +8,7 @@
     using ExitTask.Domain.Abstract.Repositories;
     using ExitTask.Domain.Entities.Abstract;
     using ExitTask.Infrastructure.Context.Abstract;
+
     using NLog;
 
     public class EfRepository<TEntity, TPrimaryKey> : IRepository<TEntity, TPrimaryKey>

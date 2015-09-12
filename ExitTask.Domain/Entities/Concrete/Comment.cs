@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace ExitTask.Domain.Entities.Concrete
+﻿namespace ExitTask.Domain.Entities.Concrete
 {
+    using System;
     using System.ComponentModel.DataAnnotations.Schema;
 
     class Comment
