@@ -2,11 +2,10 @@
 {
     using System.Collections.Generic;
 
-    using ExitTask.Application.DTOs.Concrete.Tour;
+    using ExitTask.Application.DTOs.Concrete;
 
-    public interface ITourService
+    public interface ITourService : IGenericService<TourDto, int>
     {
-        IEnumerable<TourDetailDto> GetAllTours();
-        void Commit();
+        IEnumerable<TourPreviewDto> GetPreviews();
     }
 }

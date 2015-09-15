@@ -108,8 +108,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\journey.jpg" />
-    <Content Include="Content\material.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\airplane2.png" />
     <Content Include="Content\material.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -122,10 +123,11 @@
     <Content Include="Areas\Common\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Common\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Common\Views\Home\Index.cshtml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\material.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Scripts\material.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
@@ -134,8 +136,14 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\GeoManagementController.cs" />
     <Compile Include="Areas\Admin\Controllers\TourManagementController.cs" />
-    <Compile Include="Areas\Admin\Models\CreateTourViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\CityViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\CountryViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\HotelViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\TourViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\TourListViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\UserViewModel.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
     <Compile Include="Areas\Payment\PaymentAreaRegistration.cs" />
     <Compile Include="Areas\Security\SecurityAreaRegistration.cs" />
@@ -156,9 +164,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Areas\Admin\Views\TourManagement\List.cshtml" />
+    <Content Include="Areas\Admin\Views\TourManagement\Create.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,8 +177,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Admin\Views\GeoManagement\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Areas\Admin\Views\TourManagement\" />
     <Folder Include="Areas\Payment\Controllers\" />
     <Folder Include="Areas\Payment\Models\" />
     <Folder Include="Areas\Payment\Views\Shared\" />

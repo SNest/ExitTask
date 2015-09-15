@@ -8,7 +8,7 @@
     public interface IUnitOfWork : IDisposable
 
     {
-        IRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>;
+        IGenericRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>;
 
         void Commit();
     }

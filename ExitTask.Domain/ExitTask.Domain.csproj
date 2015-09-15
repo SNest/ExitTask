@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\Repositories\IRepository.cs" />
+    <Compile Include="Abstract\Repositories\IGenericRepository.cs" />
     <Compile Include="Abstract\Repositories\ITourRepository.cs" />
     <Compile Include="Abstract\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Abstract\Repositories\IUserRepository.cs" />
@@ -50,16 +50,16 @@
     <Compile Include="Entities\Concrete\Comment.cs" />
     <Compile Include="Entities\Concrete\Country.cs" />
     <Compile Include="Entities\Abstract\Entity.cs" />
-    <Compile Include="Entities\Concrete\Enums\Feeding.cs" />
-    <Compile Include="Entities\Concrete\Enums\FileType.cs" />
-    <Compile Include="Entities\Concrete\Enums\Role.cs" />
     <Compile Include="Entities\Abstract\IEntity.cs" />
-    <Compile Include="Entities\Concrete\Enums\TourState.cs" />
-    <Compile Include="Entities\Concrete\Picture.cs" />
-    <Compile Include="Entities\Concrete\Route.cs" />
-    <Compile Include="Entities\Concrete\Enums\Sex.cs" />
+    <Compile Include="Entities\Concrete\Enum\TourFeeding.cs" />
+    <Compile Include="Entities\Concrete\Enum\TourState.cs" />
+    <Compile Include="Entities\Concrete\Enum\TourType.cs" />
+    <Compile Include="Entities\Concrete\Enum\UserSex.cs" />
+    <Compile Include="Entities\Concrete\Hotel.cs" />
+    <Compile Include="Entities\Concrete\Enum\CountryMainland.cs" />
+    <Compile Include="Entities\Concrete\Enum\HotelType.cs" />
+    <Compile Include="Entities\Concrete\Role.cs" />
     <Compile Include="Entities\Concrete\Tour.cs" />
-    <Compile Include="Entities\Concrete\Enums\TourType.cs" />
     <Compile Include="Entities\Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,13 +1,8 @@
 ﻿namespace ExitTask.Infrastructure.Context.Concrete
 {
-    using System;
-    using System.Collections.Generic;
     using System.Data.Entity;
 
-    using ExitTask.Domain.Entities.Concrete;
-    using ExitTask.Domain.Entities.Concrete.Enums;
-
-    public class ContextInitializer : DropCreateDatabaseIfModelChanges<EfContext>
+    public class ContextInitializer : DropCreateDatabaseAlways<EfContext>
     {
         protected override void Seed(EfContext db)
         {
@@ -42,32 +37,32 @@
             //db.SaveChanges();
 
 
-            var tours = new List<Tour>()
-            {
-                new Tour()
-                {
-                    Name = "Super tour 1",
-                    Type = TourType.Shopping,
-                    Description = "This tour is fucking awesome!!",
-                    StartDate = DateTime.Now,
-                    NightNumber = 5,
-                    Price = 577.0m
+            //var tours = new List<Tour>()
+            //{
+            //    new Tour()
+            //    {
+            //        Name = "Super tour 1",
+            //        Type = TourType.Shopping,
+            //        Description = "This tour is fucking awesome!!",
+            //        StartDate = DateTime.Now,
+            //        NightNumber = 5,
+            //        Price = 577.0m
 
-                },
-                new Tour()
-                {
-                    Name = "Super tour 2",
-                    Type = TourType.Shopping,
-                    Description = "This tour is really fucking awesome!!",
-                    StartDate = DateTime.Now,
-                    NightNumber = 5,
-                    Price = 577.0m
-                }
+            //    },
+            //    new Tour()
+            //    {
+            //        Name = "Super tour 2",
+            //        Type = TourType.Shopping,
+            //        Description = "This tour is really fucking awesome!!",
+            //        StartDate = DateTime.Now,
+            //        NightNumber = 5,
+            //        Price = 577.0m
+            //    }
 
-            };
+            //};
 
-            tours.ForEach(t => db.Set<Tour>().Add(t));
-            db.SaveChanges();
+            //tours.ForEach(t => db.Set<Tour>().Add(t));
+            //db.SaveChanges();
         }
     }
 }

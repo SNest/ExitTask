@@ -6,11 +6,11 @@
     using AutoMapper;
 
     using ExitTask.Application.ApplicationServices.Abstract;
-    using ExitTask.Application.DTOs.Concrete.Tour;
+    using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Domain.Abstract.UnitOfWork;
     using ExitTask.Domain.Entities.Concrete;
 
-    public class TourService : BaseService, ITourService
+    public class TourService : GenericService<TourDto, Tour, int>,  ITourService
     {
         private readonly IUnitOfWork unitOfWork;
 
@@ -18,15 +18,13 @@
             : base(unitOfWork)
         {
             this.unitOfWork = unitOfWork;
+            Mapper.CreateMap<Tour, TourPreviewDto>();
         }
 
-        public IEnumerable<TourDetailDto> GetAllTours()
+        public IEnumerable<TourPreviewDto> GetPreviews()
         {
-            Mapper.CreateMap<Tour, TourDetailDto>();
-            var result = Mapper.Map<List<TourDetailDto>>(this.unitOfWork.Entities<Tour, int>().GetAll().ToList());
+            var result = Mapper.Map<List<TourPreviewDto>>(this.unitOfWork.Entities<Tour, int>().GetAll().ToList());
             return result;
         }
-
-        
     }
 }

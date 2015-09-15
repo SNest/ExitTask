@@ -43,26 +43,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationServices\Abstract\BaseService.cs" />
+    <Compile Include="ApplicationServices\Abstract\ICityService.cs" />
+    <Compile Include="ApplicationServices\Abstract\ICountryService.cs" />
+    <Compile Include="ApplicationServices\Abstract\IGenericService.cs" />
+    <Compile Include="ApplicationServices\Abstract\IHotelService.cs" />
     <Compile Include="ApplicationServices\Abstract\ITourService.cs" />
+    <Compile Include="ApplicationServices\Abstract\IUserService.cs" />
+    <Compile Include="ApplicationServices\Concrete\CityService.cs" />
+    <Compile Include="ApplicationServices\Concrete\CountryService.cs" />
+    <Compile Include="ApplicationServices\Concrete\GenericService.cs" />
+    <Compile Include="ApplicationServices\Concrete\HotelService.cs" />
     <Compile Include="ApplicationServices\Concrete\TourService.cs" />
-    <Compile Include="DTOs\Concrete\EntityDto.cs" />
-    <Compile Include="DTOs\Abstract\IInputDto.cs" />
+    <Compile Include="DTOs\Abstract\EntityDto.cs" />
     <Compile Include="DTOs\Abstract\IEntityDto.cs" />
-    <Compile Include="DTOs\Abstract\IOutputDto.cs" />
     <Compile Include="DTOs\Concrete\CityDto.cs" />
     <Compile Include="DTOs\Concrete\CountryDto.cs" />
+    <Compile Include="DTOs\Concrete\Enum\CountryDtoMainland.cs" />
+    <Compile Include="DTOs\Concrete\Enum\TourDtoFeeding.cs" />
+    <Compile Include="DTOs\Concrete\Enum\TourDtoState.cs" />
+    <Compile Include="DTOs\Concrete\Enum\TourDtoType.cs" />
+    <Compile Include="DTOs\Concrete\Enum\UserDtoSex.cs" />
+    <Compile Include="DTOs\Concrete\HotelDto.cs" />
     <Compile Include="DTOs\Concrete\RouteDto.cs" />
-    <Compile Include="DTOs\Concrete\Tour\CreateTourInput.cs" />
-    <Compile Include="DTOs\Concrete\Tour\GetTourPreviewsInput.cs" />
-    <Compile Include="DTOs\Concrete\Tour\GetTourPreviewsOutput.cs" />
-    <Compile Include="DTOs\Concrete\Tour\TourDetailDto.cs" />
-    <Compile Include="DTOs\Concrete\Tour\TourPreviewDto.cs" />
+    <Compile Include="DTOs\Concrete\TourDto.cs" />
+    <Compile Include="DTOs\Concrete\TourPreviewDto.cs" />
+    <Compile Include="DTOs\Concrete\UserDto.cs" />
+    <Compile Include="Mapping\Destination.cs" />
+    <Compile Include="Mapping\Source.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mappers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

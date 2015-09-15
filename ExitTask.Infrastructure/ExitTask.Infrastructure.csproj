@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\Repositories\EfRepository.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Concrete\UnitOfWork\EfUnitOfWork.cs" />
     <Compile Include="Context\Abstract\IContext.cs" />
     <Compile Include="Context\Concrete\ContextInitializer.cs" />
@@ -78,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Concrete\DomainServices\" />
-    <Folder Include="Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

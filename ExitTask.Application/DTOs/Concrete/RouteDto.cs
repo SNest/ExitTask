@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    using ExitTask.Application.DTOs.Concrete.Tour;
+    using ExitTask.Application.DTOs.Abstract;
 
     public class RouteDto : EntityDto<int>
     {
@@ -10,7 +10,7 @@
 
         public string Description { get; set; }
 
-        public ICollection<TourDetailDto> Tours { get; set; }
+        public ICollection<TourDto> Tours { get; set; }
 
         public ICollection<CityDto> Cities { get; set; }
     }

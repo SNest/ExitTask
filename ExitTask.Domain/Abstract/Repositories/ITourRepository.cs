@@ -2,7 +2,7 @@
 {
     using ExitTask.Domain.Entities.Concrete;
 
-    public interface ITourRepository : IRepository<Tour, int>
+    public interface ITourRepository : IGenericRepository<Tour, int>
     {
 
     }

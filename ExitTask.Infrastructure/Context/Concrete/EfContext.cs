@@ -23,6 +23,11 @@
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Tour>().ToTable("Tours");
+            modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<City>().ToTable("Cities");
+            modelBuilder.Entity<Country>().ToTable("Countries");
+            modelBuilder.Entity<Hotel>().ToTable("Hotels");
+            modelBuilder.Entity<Comment>().ToTable("Comments");
         }
 
         public IDbSet<TEntity> Set<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>

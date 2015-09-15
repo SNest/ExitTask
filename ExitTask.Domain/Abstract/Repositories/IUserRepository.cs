@@ -2,7 +2,7 @@
 {
     using ExitTask.Domain.Entities.Concrete;
 
-    public interface IUserRepository : IRepository<User, int>
+    public interface IUserRepository : IGenericRepository<User, int>
     {
     }
 }

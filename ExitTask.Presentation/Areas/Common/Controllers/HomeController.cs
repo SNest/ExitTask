@@ -6,7 +6,7 @@
     using AutoMapper;
 
     using ExitTask.Application.ApplicationServices.Abstract;
-    using ExitTask.Application.DTOs.Concrete.Tour;
+    using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Presentation.Areas.Common.Models;
 
     public class HomeController : Controller
@@ -19,8 +19,8 @@
         }
         public ActionResult Index()
         {
-            Mapper.CreateMap<TourDetailDto, TourViewModel>();
-           return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours()));
+            Mapper.CreateMap<TourDto, TourViewModel>();
+           return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetPreviews()));
         }
     }
 }
