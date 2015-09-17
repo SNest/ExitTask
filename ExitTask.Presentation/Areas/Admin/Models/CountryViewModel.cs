@@ -3,8 +3,13 @@
     using System.Collections.Generic;
 
     using ExitTask.Application.DTOs.Concrete.Enum;
+    using ExitTask.Presentation.Areas.Admin.Validators;
 
-    internal class CountryViewModel
+    using FluentValidation;
+    using FluentValidation.Attributes;
+
+    [Validator(typeof(CountryViewModelValidator))]
+    public class CountryViewModel
     {
         public string Name { get; set; }
 
@@ -14,4 +19,6 @@
 
         public ICollection<CityViewModel> Cities { get; set; }
     }
+
+    
 }

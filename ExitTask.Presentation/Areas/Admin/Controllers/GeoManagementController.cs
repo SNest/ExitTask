@@ -1,14 +1,18 @@
-﻿using System.Web.Mvc;
-
-namespace ExitTask.Presentation.Areas.Admin.Controllers
+﻿namespace ExitTask.Presentation.Areas.Admin.Controllers
 {
+    using System.Web.Mvc;
+
+    using AutoMapper;
+
     using ExitTask.Application.ApplicationServices.Abstract;
+    using ExitTask.Application.DTOs.Concrete;
+    using ExitTask.Presentation.Areas.Admin.Models;
 
     public class GeoManagementController : Controller
     {
-        private ICountryService countryService;
-        private ICityService cityService;
-        private IHotelService hotelService;
+        private readonly ICountryService countryService;
+        private readonly ICityService cityService;
+        private readonly IHotelService hotelService;
 
         public GeoManagementController(ICountryService countryService, ICityService cityService, IHotelService hotelService)
         {
@@ -19,37 +23,51 @@ namespace ExitTask.Presentation.Areas.Admin.Controllers
 
         public ActionResult GeoList()
         {
-            return View();
+            return this.View();
         }
 
+        [HttpGet]
         public ActionResult AddCountry()
         {
-            return View();
+            return this.View();
+        }
+
+        [HttpPost]
+        public ActionResult AddCountry(CountryViewModel model)
+        {
+            if (this.ModelState.IsValid)
+            {
+                Mapper.CreateMap<CountryViewModel, CountryDto>();
+                var country = Mapper.Map<CountryDto>(model);
+                this.countryService.CreateCountry(country);
+                this.countryService.Commit();
+            }
+            return this.View();
         }
 
         public ActionResult RemoveCountry()
         {
-            return View();
+            return this.View();
         }
 
         public ActionResult AddOrEditCity()
         {
-            return View();
+            return this.View();
         }
 
         public ActionResult RemoveCity()
         {
-            return View();
+            return this.View();
         }
 
         public ActionResult AddOrEditHotel()
         {
-            return View();
+            return this.View();
         }
 
         public ActionResult RemoveHotel()
         {
-            return View();
+            return this.View();
         }
     }
 }

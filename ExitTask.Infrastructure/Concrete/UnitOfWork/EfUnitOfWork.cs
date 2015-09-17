@@ -21,7 +21,7 @@
 
         public IGenericRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>
         {
-            IGenericRepository<TEntity, TPrimaryKey> entityRepository = new GenericRepository<TEntity, TPrimaryKey>(this.db);
+            IGenericRepository<TEntity, TPrimaryKey> entityRepository = new EfRepository<TEntity, TPrimaryKey>(this.db);
             return entityRepository;
         }
 

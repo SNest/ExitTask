@@ -28,6 +28,8 @@
             modelBuilder.Entity<Country>().ToTable("Countries");
             modelBuilder.Entity<Hotel>().ToTable("Hotels");
             modelBuilder.Entity<Comment>().ToTable("Comments");
+            modelBuilder.Entity<Role>().ToTable("Roles");
+
         }
 
         public IDbSet<TEntity> Set<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>

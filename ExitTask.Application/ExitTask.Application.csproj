@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationServices\Abstract\IAppService.cs" />
     <Compile Include="ApplicationServices\Abstract\ICityService.cs" />
     <Compile Include="ApplicationServices\Abstract\ICountryService.cs" />
-    <Compile Include="ApplicationServices\Abstract\IGenericService.cs" />
     <Compile Include="ApplicationServices\Abstract\IHotelService.cs" />
     <Compile Include="ApplicationServices\Abstract\ITourService.cs" />
     <Compile Include="ApplicationServices\Abstract\IUserService.cs" />
+    <Compile Include="ApplicationServices\Concrete\AppService.cs" />
     <Compile Include="ApplicationServices\Concrete\CityService.cs" />
     <Compile Include="ApplicationServices\Concrete\CountryService.cs" />
-    <Compile Include="ApplicationServices\Concrete\GenericService.cs" />
     <Compile Include="ApplicationServices\Concrete\HotelService.cs" />
     <Compile Include="ApplicationServices\Concrete\TourService.cs" />
     <Compile Include="DTOs\Abstract\EntityDto.cs" />

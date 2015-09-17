@@ -4,7 +4,7 @@
 
     using ExitTask.Application.DTOs.Concrete.Enum;
 
-    internal class TourViewModel
+    public class TourViewModel
     {
         public string Name { get; set; }
 

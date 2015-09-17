@@ -1,9 +1,53 @@
-﻿<footer class="mdl-mini-footer">
+﻿<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<footer class="mdl-mini-footer">
     <div class="mdl-mini-footer--middle-section">
         <div class="mdl-logo">Title</div>
         <ul class="mdl-mini-footer--link-list mdl-layout--large-screen-only">
             <li><a href="#">Help</a></li>
             <li><a href="#">Privacy & Terms</a></li>
+            <li>
+                <form id="cult" action="/Common/Home/ChangeCulture" method="post">
+                    @*<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="radio-ru" class="mdl-radio__button" name="lang" value="ru" onchange=" $('#cult').submit(); "/>
+                        <span class="mdl-radio__label">RU</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="radio-ua" class="mdl-radio__button" name="lang" value="ua" onchange=" $('#cult').submit(); " />
+                        <span class="mdl-radio__label">UA</span>
+                    </label>*@
+                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="lang-toggle">
+                        <input type="checkbox" id="lang-toggle" class="mdl-switch__input" name="lang" />
+                        <span class="mdl-switch__label"></span>
+                    </label>
+                </form>
+                <script>
+                        @{
+                            string cult = "ru";
+                            if (this.Request.Cookies["lang"] != null)
+                            {
+                                cult = "\'"+ this.Request.Cookies["lang"].Value +"\'";
+                            }
+                        }
+                    var cult = @(this.Html.Raw(@cult));
+                    if (cult === "ru") {
+                        $("#lang-toggle").removeAttr("checked");
+                    } else {
+                        $("#lang-toggle").prop("checked", "checked");
+                    }
+
+                    $("#lang-toggle").change(function(){
+                        if($(this).attr("checked")){
+                            $(this).val("ru");
+                        }else{
+                            $(this).val("uk-UA");
+                        }
+                        $("#cult").submit();
+                    });
+                </script>
+
+            </li>
+            <li>@Resources.Resource.Country</li>
         </ul>
+
     </div>
 </footer>

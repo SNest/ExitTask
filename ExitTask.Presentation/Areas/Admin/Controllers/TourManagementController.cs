@@ -1,6 +1,6 @@
 ﻿namespace ExitTask.Presentation.Areas.Admin.Controllers
 {
-    using System.Collections.Generic;
+    using System.IO;
     using System.Web;
     using System.Web.Mvc;
 
@@ -13,38 +13,38 @@
     public class TourManagementController : Controller
     {
         private readonly ITourService tourService;
-        public TourManagementController(ITourService tourService)
+        internal TourManagementController(ITourService tourService)
         {
             this.tourService = tourService;
-            Mapper.CreateMap<TourCreateOrEditViewModel, TourDto>();
+            Mapper.CreateMap<TourViewModel, TourDto>();
         }
 
         [HttpGet]
-        public ActionResult List()
+        internal ActionResult List()
         {
             return this.View();
         }
 
         [HttpGet]
-        public ActionResult Create()
+        internal ActionResult Create()
         {
             return this.View();
         }
 
         [HttpPost]
-        public ActionResult Create(TourCreateOrEditViewModel model, HttpPostedFileBase upload)
+        internal ActionResult Create(TourViewModel model, HttpPostedFileBase upload)
         {
             if (this.ModelState.IsValid)
             {
                 if (upload != null && upload.ContentLength > 0)
                 {
-                    using (var reader = new System.IO.BinaryReader(upload.InputStream))
+                    using (var reader = new BinaryReader(upload.InputStream))
                     {
                         model.Image = reader.ReadBytes(upload.ContentLength);
                     }
                 }
 
-                var tour = Mapper.Map<TourCreateOrEditViewModel, TourDto>(model);
+                var tour = Mapper.Map<TourViewModel, TourDto>(model);
                 this.tourService.CreateTour(tour);
                 return this.RedirectToAction("List");
             }
@@ -52,25 +52,25 @@
         }
 
         [HttpGet]
-        public ActionResult Update()
+        internal ActionResult Update()
         {
             return this.View();
         }
 
         [HttpPost]
-        public ActionResult Update(int id)
+        internal ActionResult Update(int id)
         {
             return this.View();
         }
 
         [HttpGet]
-        public ActionResult Delete()
+        internal ActionResult Delete()
         {
             return this.View();
         }
 
         [HttpPost]
-        public ActionResult Delete(int id)
+        internal ActionResult Delete(int id)
         {
             return this.View();
         }

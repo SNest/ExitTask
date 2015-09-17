@@ -7,7 +7,10 @@
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Application.ApplicationServices.Concrete;
 
+    using FluentValidation.Mvc;
+
     using Ninject;
+    using Ninject.Web.Mvc.FluentValidation;
 
     public class NinjectDependencyResolver : IDependencyResolver
     {
@@ -15,6 +18,7 @@
         public NinjectDependencyResolver(IKernel kernelParam)
         {
             this.kernel = kernelParam;
+
             this.AddBindings();
         }
         public object GetService(Type serviceType)
@@ -28,6 +32,9 @@
         private void AddBindings()
         {
             this.kernel.Bind<ITourService>().To<TourService>();
+            this.kernel.Bind<ICountryService>().To<CountryService>();
+            this.kernel.Bind<ICityService>().To<CityService>();
+            this.kernel.Bind<IHotelService>().To<HotelService>();
         }
     }
 }

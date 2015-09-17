@@ -11,17 +11,17 @@
 
     using NLog;
 
-    public class GenericRepository<TEntity, TPrimaryKey> : IGenericRepository<TEntity, TPrimaryKey>
+    public class EfRepository<TEntity, TPrimaryKey> : IGenericRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
     {
-        private static Logger Logger;
+        private static Logger logger;
 
         private readonly IContext db;
 
-        public GenericRepository(IContext db)
+        public EfRepository(IContext db)
         {
             this.db = db;
-            Logger = LogManager.GetCurrentClassLogger();
+            logger = LogManager.GetCurrentClassLogger();
         }
 
         public IEnumerable<TEntity> GetAll()
@@ -32,7 +32,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Trace(exception.StackTrace);
+                logger.Trace(exception.StackTrace);
                 throw;
             }
         }
@@ -45,7 +45,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Trace(exception.StackTrace);
+                logger.Trace(exception.StackTrace);
                 throw;
             }
         }
@@ -58,7 +58,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Trace(exception.StackTrace);
+                logger.Trace(exception.StackTrace);
                 throw;
             }
         }
@@ -71,7 +71,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Trace(exception.StackTrace);
+                logger.Trace(exception.StackTrace);
                 throw;
             }
         }
@@ -84,7 +84,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Trace(exception.StackTrace);
+                logger.Trace(exception.StackTrace);
                 throw;
             }
         }
@@ -97,7 +97,7 @@
             }
             catch (Exception exception)
             {
-                Logger.Trace(exception.StackTrace);
+                logger.Trace(exception.StackTrace);
                 throw;
             }
         }

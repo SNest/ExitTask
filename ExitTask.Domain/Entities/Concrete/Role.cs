@@ -2,7 +2,9 @@
 {
     using System.Collections.Generic;
 
-    public class Role
+    using ExitTask.Domain.Entities.Abstract;
+
+    public class Role : Entity<int>
     {
         public string Name { get; set; }
 

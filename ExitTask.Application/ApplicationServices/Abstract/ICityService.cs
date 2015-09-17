@@ -2,7 +2,7 @@
 {
     using ExitTask.Application.DTOs.Concrete;
 
-    public interface ICityService : IGenericService<CityDto, int>
+    public interface ICityService : IAppService
     {
 
     }

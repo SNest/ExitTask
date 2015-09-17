@@ -9,8 +9,11 @@
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            ).DataTokens.Add("area", "Common"); 
+            routes.MapRoute(
+                "default",
+                "{controller}/{action}/{id}",
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional})
+                .DataTokens.Add("area", "Common");
         }
     }
 }
