@@ -10,7 +10,6 @@ namespace ExitTask.Presentation
     using System;
     using System.Reflection;
     using System.Web;
-    using System.Web.Mvc;
 
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Application.ApplicationServices.Concrete;
@@ -22,10 +21,9 @@ namespace ExitTask.Presentation
 
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
+    using Ninject.Web.Common;
     using Ninject;
     using Ninject.Modules;
-    using Ninject.Web.Common;
-    using Ninject.Web.Mvc.FluentValidation;
 
     public static class NinjectWebCommon
     {
@@ -55,7 +53,8 @@ namespace ExitTask.Presentation
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var modules = new INinjectModule[] { new DiModule("DbConnection") };
+            var modules = new INinjectModule[] { new DiModule("DbConnection")};
+
             var kernel = new StandardKernel(modules);
 
             try
@@ -79,16 +78,24 @@ namespace ExitTask.Presentation
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
+            //DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
 
-            var ninjectValidatorFactory = new NinjectValidatorFactory(kernel);
-            ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(ninjectValidatorFactory));
-            DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
-
-            AssemblyScanner.FindValidatorsInAssembly(Assembly.GetExecutingAssembly())
-                .ForEach(match => kernel.Bind(match.InterfaceType).To(match.ValidatorType));
-
+            kernel.Bind<ITourService>().To<TourService>();
             kernel.Bind<ICountryService>().To<CountryService>();
+            kernel.Bind<ICityService>().To<CityService>();
+            kernel.Bind<IHotelService>().To<HotelService>();
+            
+            AssemblyScanner.FindValidatorsInAssembly(Assembly.GetExecutingAssembly())
+.ForEach(match => kernel.Bind(match.InterfaceType)
+.To(match.ValidatorType));
+
+            FluentValidationModelValidatorProvider.Configure(provider =>
+            {
+                provider.ValidatorFactory = new NinjectValidatorFactory(kernel);
+            });
+
+           
+
         }
     }
 }

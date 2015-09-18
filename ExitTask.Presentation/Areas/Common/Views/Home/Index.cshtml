@@ -1,4 +1,5 @@
-﻿@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
+﻿@using Resources
+@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
 
 @{
     this.ViewBag.Title = "Index";
@@ -47,5 +48,6 @@
         </td>
     </tr>
 }
-    @Resources.Resource.Country
+
+    @Resource.Country
 </table>

@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Web;
-
-namespace ExitTask.Presentation.Filters
+﻿namespace ExitTask.Presentation.Filters
 {
+    using System.Collections.Generic;
     using System.Globalization;
     using System.Threading;
+    using System.Web;
     using System.Web.Mvc;
 
     public class CultureAttribute : FilterAttribute, IActionFilter

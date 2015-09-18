@@ -5,7 +5,6 @@
     using ExitTask.Application.DTOs.Concrete.Enum;
     using ExitTask.Presentation.Areas.Admin.Validators;
 
-    using FluentValidation;
     using FluentValidation.Attributes;
 
     [Validator(typeof(CountryViewModelValidator))]

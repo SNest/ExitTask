@@ -16,7 +16,6 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Pr
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.Web.Common.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.Web.Mvc.dll
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.Web.Mvc.FluentValidation.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\System.Web.Helpers.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\System.Web.Mvc.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\System.Web.Razor.dll
@@ -38,7 +37,6 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Pr
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.xml
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.Web.Common.xml
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.Web.Mvc.xml
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\Ninject.Web.Mvc.FluentValidation.xml
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\System.Web.Helpers.xml
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\System.Web.Mvc.xml
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\System.Web.Razor.xml
@@ -61,3 +59,7 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Pr
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\uk-UA\ExitTask.Presentation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\ExitTask.Presentation.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\ExitTask.Presentation.pdb
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\da\FluentValidation.resources.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\fi\FluentValidation.resources.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\ko\FluentValidation.resources.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\mk\FluentValidation.resources.dll
