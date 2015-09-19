@@ -11,20 +11,20 @@
 
     using NLog;
 
-    public class EfRepository<TEntity, TPrimaryKey> : IGenericRepository<TEntity, TPrimaryKey>
+    public class EfGenericRepository<TEntity, TPrimaryKey> : IGenericRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
     {
         private static Logger logger;
 
         private readonly IContext db;
 
-        public EfRepository(IContext db)
+        public EfGenericRepository(IContext db)
         {
             this.db = db;
             logger = LogManager.GetCurrentClassLogger();
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             try
             {
@@ -37,7 +37,7 @@
             }
         }
 
-        public TEntity Get(TPrimaryKey id)
+        public virtual TEntity Get(TPrimaryKey id)
         {
             try
             {
@@ -50,7 +50,7 @@
             }
         }
 
-        public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate)
+        public virtual IEnumerable<TEntity> Find(Func<TEntity, bool> predicate)
         {
             try
             {
@@ -63,7 +63,7 @@
             }
         }
 
-        public void Create(TEntity item)
+        public virtual void Create(TEntity item)
         {
             try
             {
@@ -76,7 +76,7 @@
             }
         }
 
-        public void Update(TEntity item)
+        public virtual void Update(TEntity item)
         {
             try
             {
@@ -89,7 +89,7 @@
             }
         }
 
-        public void Delete(TPrimaryKey id)
+        public virtual void Delete(TPrimaryKey id)
         {
             try
             {

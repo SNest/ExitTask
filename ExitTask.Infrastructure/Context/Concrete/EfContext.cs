@@ -11,13 +11,13 @@
         public EfContext()
             : base("DbConnection")
         {
-            Database.SetInitializer(new ContextInitializer());
+            //Database.SetInitializer(new ContextInitializer());
         }
 
         public EfContext(string connectionString)
             : base(connectionString)
         {
-            Database.SetInitializer(new ContextInitializer());
+            //Database.SetInitializer(new ContextInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,7 +28,6 @@
             modelBuilder.Entity<Country>().ToTable("Countries");
             modelBuilder.Entity<Hotel>().ToTable("Hotels");
             modelBuilder.Entity<Comment>().ToTable("Comments");
-            modelBuilder.Entity<Role>().ToTable("Roles");
 
         }
 

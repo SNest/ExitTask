@@ -34,8 +34,14 @@
       <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +60,7 @@
     <Compile Include="ApplicationServices\Concrete\CountryService.cs" />
     <Compile Include="ApplicationServices\Concrete\HotelService.cs" />
     <Compile Include="ApplicationServices\Concrete\TourService.cs" />
+    <Compile Include="ApplicationServices\Concrete\UserService.cs" />
     <Compile Include="DTOs\Abstract\EntityDto.cs" />
     <Compile Include="DTOs\Abstract\IEntityDto.cs" />
     <Compile Include="DTOs\Concrete\CityDto.cs" />
@@ -62,7 +69,9 @@
     <Compile Include="DTOs\Concrete\Enum\TourDtoFeeding.cs" />
     <Compile Include="DTOs\Concrete\Enum\TourDtoState.cs" />
     <Compile Include="DTOs\Concrete\Enum\TourDtoType.cs" />
+    <Compile Include="DTOs\Concrete\Enum\UserDtoRole.cs" />
     <Compile Include="DTOs\Concrete\Enum\UserDtoSex.cs" />
+    <Compile Include="DTOs\Concrete\Enum\UserDtoState.cs" />
     <Compile Include="DTOs\Concrete\HotelDto.cs" />
     <Compile Include="DTOs\Concrete\RouteDto.cs" />
     <Compile Include="DTOs\Concrete\TourDto.cs" />
@@ -71,6 +80,8 @@
     <Compile Include="Mapping\Destination.cs" />
     <Compile Include="Mapping\Source.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ExitTaskMembershipProvider.cs" />
+    <Compile Include="Providers\ExitTaskRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

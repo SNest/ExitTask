@@ -10,9 +10,11 @@ namespace ExitTask.Presentation
     using System;
     using System.Reflection;
     using System.Web;
+    using System.Web.Security;
 
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Application.ApplicationServices.Concrete;
+    using ExitTask.Application.Providers;
     using ExitTask.DependencyResolver.Modules;
     using ExitTask.Presentation.Util;
 
@@ -21,9 +23,9 @@ namespace ExitTask.Presentation
 
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
-    using Ninject.Web.Common;
     using Ninject;
     using Ninject.Modules;
+    using Ninject.Web.Common;
 
     public static class NinjectWebCommon
     {
@@ -53,7 +55,7 @@ namespace ExitTask.Presentation
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var modules = new INinjectModule[] { new DiModule("DbConnection")};
+            var modules = new INinjectModule[] { new RepositoryModule("DbConnection") };
 
             var kernel = new StandardKernel(modules);
 
@@ -78,24 +80,21 @@ namespace ExitTask.Presentation
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            //DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
-
             kernel.Bind<ITourService>().To<TourService>();
             kernel.Bind<ICountryService>().To<CountryService>();
             kernel.Bind<ICityService>().To<CityService>();
             kernel.Bind<IHotelService>().To<HotelService>();
-            
-            AssemblyScanner.FindValidatorsInAssembly(Assembly.GetExecutingAssembly())
-.ForEach(match => kernel.Bind(match.InterfaceType)
-.To(match.ValidatorType));
+            kernel.Bind<IUserService>().To<UserService>();
 
-            FluentValidationModelValidatorProvider.Configure(provider =>
-            {
-                provider.ValidatorFactory = new NinjectValidatorFactory(kernel);
-            });
-
+            //kernel.Bind<MembershipProvider>().To<ExitTaskMembershipProvider>().InRequestScope();
+            //kernel.Bind<RoleProvider>().To<ExitTaskRoleProvider>().InRequestScope();
            
 
+            AssemblyScanner.FindValidatorsInAssembly(Assembly.GetExecutingAssembly())
+                .ForEach(match => kernel.Bind(match.InterfaceType).To(match.ValidatorType));
+
+            FluentValidationModelValidatorProvider.Configure(
+                provider => { provider.ValidatorFactory = new NinjectValidatorFactory(kernel); });
         }
     }
 }

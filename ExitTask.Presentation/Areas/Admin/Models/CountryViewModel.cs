@@ -4,11 +4,12 @@
 
     using ExitTask.Application.DTOs.Concrete.Enum;
     using ExitTask.Presentation.Areas.Admin.Validators;
+    using ExitTask.Presentation.Models;
 
     using FluentValidation.Attributes;
 
     [Validator(typeof(CountryViewModelValidator))]
-    public class CountryViewModel
+    public class CountryViewModel : ViewModel<int>
     {
         public string Name { get; set; }
 

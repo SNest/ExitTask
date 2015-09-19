@@ -3,8 +3,9 @@
     using System;
 
     using ExitTask.Application.DTOs.Concrete.Enum;
+    using ExitTask.Presentation.Models;
 
-    public class TourListViewModel
+    public class TourListViewModel : ViewModel<int>
     {
         public string Name { get; set; }
 

@@ -14,6 +14,9 @@
 
         private readonly IContext db;
 
+        private IUserRepository userRepository;
+        private ITourRepository tourRepository;
+
         public EfUnitOfWork(IContext db)
         {
             this.db = db;
@@ -21,8 +24,24 @@
 
         public IGenericRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>
         {
-            IGenericRepository<TEntity, TPrimaryKey> entityRepository = new EfRepository<TEntity, TPrimaryKey>(this.db);
+            IGenericRepository<TEntity, TPrimaryKey> entityRepository = new EfGenericRepository<TEntity, TPrimaryKey>(this.db);
             return entityRepository;
+        }
+
+        public IUserRepository Users
+        {
+            get
+            {
+                return this.userRepository ?? (this.userRepository = new EfUserRepository(this.db));
+            }
+        }
+
+        public ITourRepository Tours
+        {
+            get
+            {
+                return this.tourRepository ?? (this.tourRepository = new EfTourRepository(this.db));
+            }
         }
 
         public void Commit()

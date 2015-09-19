@@ -1,6 +1,8 @@
 ﻿namespace ExitTask.Presentation.Areas.Admin.Models
 {
-    public class HotelViewModel
+    using ExitTask.Presentation.Models;
+
+    public class HotelViewModel : ViewModel<int>
     {
     }
 }

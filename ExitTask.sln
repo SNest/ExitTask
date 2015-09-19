@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExitTask.Presentation", "Ex
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{9F298330-E116-47DC-9484-928C2B787734}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExitTask.DependencyResolver", "ExitTask.DependencyResolver\ExitTask.DependencyResolver.csproj", "{A26BD166-574E-4068-AF0E-CD35BC7C99F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExitTask.CompositionRoot", "ExitTask.DependencyResolver\ExitTask.CompositionRoot.csproj", "{A26BD166-574E-4068-AF0E-CD35BC7C99F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

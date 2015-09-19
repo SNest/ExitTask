@@ -10,6 +10,10 @@
     {
         IGenericRepository<TEntity, TPrimaryKey> Entities<TEntity, TPrimaryKey>() where TEntity : class, IEntity<TPrimaryKey>;
 
+        IUserRepository Users { get; }
+
+        ITourRepository Tours { get; }
+
         void Commit();
     }
 }

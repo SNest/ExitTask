@@ -1,6 +1,8 @@
 ﻿namespace ExitTask.Presentation.Areas.Admin.Models
 {
-    public class CityViewModel
+    using ExitTask.Presentation.Models;
+
+    public class CityViewModel : ViewModel<int>
     {
     }
 }

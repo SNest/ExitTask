@@ -7,13 +7,20 @@
 
     using Ninject.Modules;
 
-    public class DiModule : NinjectModule
+    public class RepositoryModule : NinjectModule
     {
         private readonly string connectionString;
-        public DiModule(string connection)
+
+        public RepositoryModule()
+        {
+            
+        }
+
+        public RepositoryModule(string connection)
         {
             this.connectionString = connection;
         }
+
         public override void Load()
         {
             this.Bind<IUnitOfWork>().To<EfUnitOfWork>();

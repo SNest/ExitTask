@@ -3,11 +3,12 @@
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
+    using System.Web.Security;
 
-    using ExitTask.Presentation.Util;
+    using ExitTask.DependencyResolver.Modules;
+    using ExitTask.Presentation.Filters;
 
-    using FluentValidation.Mvc;
-
+    using Ninject;
     using Ninject.Web.Common;
 
     public class MvcApplication : HttpApplication
@@ -16,27 +17,14 @@
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
-            //FluentValidationModelValidatorProvider.Configure();
-
-            //FluentValidationModelValidatorProvider.Configure(
-            //    provider => { provider.ValidatorFactory = new FluentValidationConfig(); });
-
-            //NinjectValidatorFactory ninjectValidatorFactory = new NinjectValidatorFactory((new Bootstrapper()).Kernel);
-            //ModelValidatorProviders.Providers.Add(new FluentValidationModelValidatorProvider(ninjectValidatorFactory));
+            GlobalFilters.Filters.Add(new AuthorizeAttribute());
+            GlobalFilters.Filters.Add(new CultureAttribute());
 
             DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
 
-            //FluentValidationModelValidatorProvider.Configure(x => x.ValidatorFactory = ninjectValidatorFactory);
-
-            //FluentValidationModelValidatorProvider.Configure(provider => {
-            //    provider.ValidatorFactory = new NinjectValidatorFactory((new Bootstrapper()).Kernel);
-            //});
-
-            //FluentValidationModelValidatorProvider.Configure(
-            //    provider => { provider.ValidatorFactory = new FluentValidationConfig(); });
-
-
+            var kernel = new Bootstrapper().Kernel;
+            kernel.Inject(Membership.Provider);
+            kernel.Inject(Roles.Provider);
         }
     }
 }

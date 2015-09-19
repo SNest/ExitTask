@@ -1,6 +1,8 @@
 ﻿namespace ExitTask.Presentation.Areas.Admin.Models
 {
-    public class UserViewModel
-    {
+    using ExitTask.Presentation.Models;
+
+    public class UserViewModel : ViewModel<int>
+    { 
     }
 }

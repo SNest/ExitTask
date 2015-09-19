@@ -7,7 +7,9 @@
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Presentation.Areas.Admin.Models;
+    using ExitTask.Presentation.Filters;
 
+    [Culture]
     public class GeoManagementController : Controller
     {
         private readonly ICountryService countryService;

@@ -150,7 +150,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\FluentValidationConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
@@ -165,10 +164,18 @@
     <Compile Include="Areas\Admin\Validators\CountryViewModelValidator.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
     <Compile Include="Areas\Payment\PaymentAreaRegistration.cs" />
+    <Compile Include="Areas\Security\Controllers\AuthorizationController.cs" />
+    <Compile Include="Areas\Security\Controllers\RegistrationController.cs" />
+    <Compile Include="Areas\Security\Models\UserAuthorizationViewModel.cs" />
+    <Compile Include="Areas\Security\Models\UserRegistrationViewModel.cs" />
     <Compile Include="Areas\Security\SecurityAreaRegistration.cs" />
+    <Compile Include="Areas\Security\Validators\UserAuthorizationViewModelValidator.cs" />
+    <Compile Include="Areas\Security\Validators\UserRegistrationViewModelValidator.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Areas\Common\Controllers\HomeController.cs" />
     <Compile Include="Filters\CultureAttribute.cs" />
+    <Compile Include="Models\IViewModel.cs" />
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Util\NinjectValidatorFactory.cs" />
     <Compile Include="Resources\Resource.uk-UA.Designer.cs">
       <DependentUpon>Resource.uk-UA.resx</DependentUpon>
@@ -180,7 +187,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Util\MvcDiModule.cs" />
     <Compile Include="Util\NinjectDependencyResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +210,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Areas\Admin\Views\GeoManagement\AddCountry.cshtml" />
+    <Content Include="Areas\Security\Views\Registration\SignUp.cshtml" />
+    <Content Include="Areas\Security\Views\Authorization\SignIn.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -217,8 +225,6 @@
     <Folder Include="Areas\Payment\Controllers\" />
     <Folder Include="Areas\Payment\Models\" />
     <Folder Include="Areas\Payment\Views\Shared\" />
-    <Folder Include="Areas\Security\Controllers\" />
-    <Folder Include="Areas\Security\Models\" />
     <Folder Include="Areas\Security\Views\Shared\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
@@ -229,9 +235,9 @@
       <Project>{9976a875-1601-4d97-90f1-ed3c2e460c2c}</Project>
       <Name>ExitTask.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ExitTask.DependencyResolver\ExitTask.DependencyResolver.csproj">
+    <ProjectReference Include="..\ExitTask.DependencyResolver\ExitTask.CompositionRoot.csproj">
       <Project>{a26bd166-574e-4068-af0e-cd35bc7c99f7}</Project>
-      <Name>ExitTask.DependencyResolver</Name>
+      <Name>ExitTask.CompositionRoot</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

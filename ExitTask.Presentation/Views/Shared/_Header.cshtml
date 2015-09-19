@@ -4,9 +4,16 @@
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="mdl-navigation__link" href="/Security/Authorization/SignOut">@Resources.Resource.SignOut</a>
+                }
+                else
+                {
+                    <a class="mdl-navigation__link" href="/Security/Registration/SignUp">@Resources.Resource.SignUp</a>
+                    <a class="mdl-navigation__link" href="/Security/Authorization/SignIn">@Resources.Resource.SignIn</a>
+                }
+                
             </nav>
         </div>
     </header>

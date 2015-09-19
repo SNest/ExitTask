@@ -54,11 +54,12 @@
     <Compile Include="Entities\Concrete\Enum\TourFeeding.cs" />
     <Compile Include="Entities\Concrete\Enum\TourState.cs" />
     <Compile Include="Entities\Concrete\Enum\TourType.cs" />
+    <Compile Include="Entities\Concrete\Enum\UserRole.cs" />
     <Compile Include="Entities\Concrete\Enum\UserSex.cs" />
+    <Compile Include="Entities\Concrete\Enum\UserState.cs" />
     <Compile Include="Entities\Concrete\Hotel.cs" />
     <Compile Include="Entities\Concrete\Enum\CountryMainland.cs" />
     <Compile Include="Entities\Concrete\Enum\HotelType.cs" />
-    <Compile Include="Entities\Concrete\Role.cs" />
     <Compile Include="Entities\Concrete\Tour.cs" />
     <Compile Include="Entities\Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

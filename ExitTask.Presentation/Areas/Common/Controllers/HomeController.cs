@@ -12,6 +12,7 @@
     using ExitTask.Presentation.Areas.Common.Models;
     using ExitTask.Presentation.Filters;
 
+    [AllowAnonymous]
     [Culture]
     public class HomeController : Controller
     {

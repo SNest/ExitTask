@@ -1,40 +1,50 @@
 ﻿namespace ExitTask.Infrastructure.Context.Concrete
 {
+    using System.Collections.Generic;
     using System.Data.Entity;
 
-    public class ContextInitializer : DropCreateDatabaseAlways<EfContext>
+    using ExitTask.Domain.Entities.Concrete;
+    using ExitTask.Domain.Entities.Concrete.Enum;
+
+    public class ContextInitializer : DropCreateDatabaseIfModelChanges<EfContext>
     {
         protected override void Seed(EfContext db)
         {
-            //var users = new List<User>()
-            //{
-            //    new User()
-            //    {
-            //        FirstName = "Sergey",
-            //        LastName = "Nestertsov",
-            //        Sex = Sex.Male,
-            //        Role = Role.Admin
-            //    },
+            var users = new List<User>()
+            {
+                new User()
+                {
+                    FirstName = "Sergey",
+                    LastName = "Nestertsov",
+                    Sex = UserSex.Male,
+                    Role = UserRole.Admin,
+                    Password = "1234",
+                    Email = "n@gmail.com"
+                },
 
-            //    new User()
-            //    {
-            //        FirstName = "Andrey",
-            //        LastName = "Nestertsov",
-            //        Sex = Sex.Male,
-            //        Role = Role.Admin
-            //    },
+                new User()
+                {
+                    FirstName = "Andrey",
+                    LastName = "Nestertsov",
+                    Sex = UserSex.Male,
+                    Role = UserRole.Admin,
+                    Password = "1234",
+                    Email = "na@gmail.com"
+                },
 
-            //    new User()
-            //    {
-            //        FirstName = "Alexandr",
-            //        LastName = "Nestertsov",
-            //        Sex = Sex.Male,
-            //        Role = Role.Admin
-            //    }
-            //};
+                new User()
+                {
+                    FirstName = "Alexandr",
+                    LastName = "Nestertsov",
+                    Sex = UserSex.Male,
+                    Role = UserRole.Admin,
+                    Password = "1234",
+                    Email = "nga@gmail.com"
+                }
+            };
 
-            //users.ForEach(u => db.Set<User>().Add(u));
-            //db.SaveChanges();
+            users.ForEach(u => db.Set<User>().Add(u));
+            db.SaveChanges();
 
 
             //var tours = new List<Tour>()

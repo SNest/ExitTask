@@ -1,11 +1,11 @@
-﻿using System;
-
-using FluentValidation;
-using Ninject;
-
-namespace ExitTask.Presentation.Util
+﻿namespace ExitTask.Presentation.Util
 {
+    using System;
     using System.Linq;
+
+    using FluentValidation;
+
+    using Ninject;
 
     public class NinjectValidatorFactory : ValidatorFactoryBase
     {
