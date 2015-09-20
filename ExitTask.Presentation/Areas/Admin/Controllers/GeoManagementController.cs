@@ -90,7 +90,7 @@
             {
                 try
                 {
-                    model.Country = this.countryService.GetCountry(model.CountryId);
+                    //model.Country = this.countryService.GetCountry(model.CountryId);
                     Mapper.CreateMap<CityViewModel, CityDto>();
                     var city = Mapper.Map<CityDto>(model);
                     this.cityService.CreateCity(city);
@@ -115,7 +115,7 @@
         [HttpGet]
         public ActionResult AddHotel()
         {
-            var model = new HotelViewModel { Cities = this.GetCountries() };
+            var model = new HotelViewModel { Cities = this.GetCities() };
             return this.View(model);
         }
 
@@ -126,11 +126,11 @@
             {
                 try
                 {
-                    model.City = this.cityService.GetCity(model.CityId);
-                    Mapper.CreateMap<CityViewModel, CityDto>();
+                    //model.City = this.cityService.GetCity(model.CityId);
+                    Mapper.CreateMap<HotelViewModel, HotelDto>();
                     var hotel = Mapper.Map<HotelDto>(model);
                     this.hotelService.CreateHotel(hotel);
-                    this.cityService.Commit();
+                    this.hotelService.Commit();
                 }
                 catch (Exception exception)
                 {

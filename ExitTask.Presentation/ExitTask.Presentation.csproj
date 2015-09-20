@@ -215,8 +215,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Areas\Admin\Views\TourManagement\List.cshtml" />
-    <Content Include="Areas\Admin\Views\TourManagement\Create.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -249,6 +247,7 @@
     <Content Include="fonts\bootstrap-material-fonts\RobotoDraftMedium.woff2" />
     <Content Include="fonts\bootstrap-material-fonts\RobotoDraftRegular.woff" />
     <Content Include="fonts\bootstrap-material-fonts\RobotoDraftRegular.woff2" />
+    <Content Include="Areas\Admin\Views\TourManagement\AddTour.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">

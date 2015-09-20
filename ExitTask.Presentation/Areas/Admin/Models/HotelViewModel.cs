@@ -13,7 +13,7 @@
 
         public string Description { get; set; }
 
-        public TourDtoType Type { get; set; }
+        public HotelDtoType Type { get; set; }
 
         public int Stars { get; set; }
 

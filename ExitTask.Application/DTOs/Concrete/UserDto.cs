@@ -19,6 +19,8 @@
 
         public UserDtoState State { get; set; }
 
+        public int CountryId { get; set; }
+
         public CityDto City { get; set; }
     }
 }

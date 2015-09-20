@@ -4,7 +4,6 @@
 
     using ExitTask.Application.DTOs.Abstract;
     using ExitTask.Application.DTOs.Concrete.Enum;
-    using ExitTask.Domain.Entities.Concrete.Enum;
 
     public class TourDto : EntityDto<int>
     {
@@ -12,7 +11,7 @@
 
         public string Description { get; set; }
 
-        public TourType Type { get; set; }
+        public TourDtoType Type { get; set; }
 
         public DateTime BeginDepartureTime { get; set; }
 
@@ -32,13 +31,21 @@
 
         public byte[] Image { get; set; }
 
-        public virtual UserDto Customer { get; set; }
+        public int? CustomerId { get; set; }
 
-        public virtual CityDto StartCity { get; set; }
+        public int? StartCityId { get; set; }
 
-        public virtual CityDto FinishCity { get; set; }
+        public int? EndCityId { get; set; }
 
-        public virtual HotelDto Hotel { get; set; }
+        public int? HotelId { get; set; }
+
+        public UserDto Customer { get; set; }
+
+        public CityDto StartCity { get; set; }
+
+        public CityDto FinishCity { get; set; }
+
+        public HotelDto Hotel { get; set; }
 
     }
 }

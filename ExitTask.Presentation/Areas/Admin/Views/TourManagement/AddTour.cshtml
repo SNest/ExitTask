@@ -1,0 +1,150 @@
+﻿@model ExitTask.Presentation.Areas.Admin.Models.TourViewModel
+
+@{
+    this.ViewBag.Title = "AddTour";
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddTour</h2>
+
+@using (this.Html.BeginForm(new { enctype = "multipart/form-data"})) 
+{
+    @(this.Html.AntiForgeryToken())
+
+    <div class="form-horizontal">
+        <h4>TourViewModel</h4>
+        <hr/>
+
+        @(this.Html.ValidationSummary(true, "", new { @class = "text-danger" }))
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" }))
+            
+            <div class="form-group">
+                @(this.Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } }))
+                @(this.Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5" }))
+                @(this.Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.Type, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EnumDropDownListFor(model => model.Type, new { @class = "form-control" } ))
+                @(this.Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.BeginDepartureTime, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EditorFor(model => model.BeginDepartureTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                @(this.Html.ValidationMessageFor(model => model.BeginDepartureTime, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.BeginArrivalTime, new { @class = "control-label col-md-2", type = "date" }))
+            <div class="col-md-10">
+                @(this.Html.EditorFor(model => model.BeginArrivalTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                @(this.Html.ValidationMessageFor(model => model.BeginArrivalTime, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.EndDepartureTime, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EditorFor(model => model.EndDepartureTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                @(this.Html.ValidationMessageFor(model => model.EndDepartureTime, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.EndArrivalTime, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EditorFor(model => model.EndArrivalTime, new { htmlAttributes = new { @class = "form-control" } }))
+                @(this.Html.ValidationMessageFor(model => model.EndArrivalTime, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.PersonNumber, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EditorFor(model => model.PersonNumber, new { htmlAttributes = new { @class = "form-control" } }))
+                @(this.Html.ValidationMessageFor(model => model.PersonNumber, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.Feeding, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EnumDropDownListFor(model => model.Feeding, new { @class = "form-control" } ))
+                @(this.Html.ValidationMessageFor(model => model.Feeding, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } }))
+                @(this.Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.EnumDropDownListFor(model => model.State, new { @class = "form-control" } ))
+                @(this.Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.LabelFor(model => model.Image, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.Editor("picture", new { htmlAttributes = new { @class = "form-control", type = "file" } }))
+                @(this.Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.Label(Resources.Resource.StartCity, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.DropDownListFor(model => model.StartCityId, this.Model.Cities, new { htmlAttributes = new { @class = "form-control", type = "file" } }))
+                @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.Label(Resources.Resource.FinishCity, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.DropDownListFor(model => model.EndCityId, this.Model.Cities, new { htmlAttributes = new { @class = "form-control", type = "file" } }))
+                @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @(this.Html.Label(Resources.Resource.Hotel, new { @class = "control-label col-md-2" }))
+            <div class="col-md-10">
+                @(this.Html.DropDownListFor(model => model.HotelId, this.Model.Hotels, new { htmlAttributes = new { @class = "form-control", type = "file" } }))
+                @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @(this.Html.ActionLink("Back to List", "Index"))
+</div>

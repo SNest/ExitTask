@@ -1,6 +1,9 @@
 ﻿namespace ExitTask.Presentation.Areas.Admin.Controllers
 {
+    using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Web;
     using System.Web.Mvc;
 
@@ -12,65 +15,105 @@
 
     public class TourManagementController : Controller
     {
+        private readonly ICityService cityService;
+
+        private readonly IHotelService hotelService;
+
         private readonly ITourService tourService;
-        internal TourManagementController(ITourService tourService)
+
+        public TourManagementController(ITourService tourService, ICityService cityService, IHotelService hotelService)
         {
             this.tourService = tourService;
+            this.cityService = cityService;
+            this.hotelService = hotelService;
             Mapper.CreateMap<TourViewModel, TourDto>();
         }
 
         [HttpGet]
-        internal ActionResult List()
+        public ActionResult List()
         {
             return this.View();
+        }
+
+        private IEnumerable<SelectListItem> GetCities()
+        {
+            var cities =
+                this.cityService.GetAllCitys()
+                    .Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() });
+
+            return new SelectList(cities, "Value", "Text");
+        }
+
+        private IEnumerable<SelectListItem> GetHotels()
+        {
+            var hotels =
+                this.hotelService.GetAllHotels()
+                    .Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() });
+
+            return new SelectList(hotels, "Value", "Text");
         }
 
         [HttpGet]
-        internal ActionResult Create()
+        public ActionResult AddTour()
         {
-            return this.View();
+            var model = new TourViewModel { Cities = this.GetCities(), Hotels = this.GetHotels() };
+            return this.View(model);
         }
 
         [HttpPost]
-        internal ActionResult Create(TourViewModel model, HttpPostedFileBase upload)
+        public ActionResult AddTour(TourViewModel model, HttpPostedFileBase picture)
         {
             if (this.ModelState.IsValid)
             {
-                if (upload != null && upload.ContentLength > 0)
+                try
                 {
-                    using (var reader = new BinaryReader(upload.InputStream))
+                    if (picture != null)
                     {
-                        model.Image = reader.ReadBytes(upload.ContentLength);
+                        var target = new MemoryStream();
+                        picture.InputStream.CopyTo(target);
+                        model.Image = target.ToArray();
                     }
+                    else
+                    {
+                        
+                    }
+
+                    var tour = Mapper.Map<TourDto>(model);
+                    this.tourService.CreateTour(tour);
+                    this.tourService.Commit();
+                    return this.RedirectToAction("Index", "Home", new { area = "Common" });
                 }
-
-                var tour = Mapper.Map<TourViewModel, TourDto>(model);
-                this.tourService.CreateTour(tour);
-                return this.RedirectToAction("List");
+                catch (Exception exception)
+                {
+                    this.ViewData["ErrMsg"] = exception.Message;
+                    this.ViewData["ErrTrace"] = exception.StackTrace;
+                    return this.View("Error");
+                }
             }
-            return this.View();
+            model = new TourViewModel { Cities = this.GetCities(), Hotels = this.GetHotels() };
+            return this.View(model);
         }
 
         [HttpGet]
-        internal ActionResult Update()
+        public ActionResult Update()
         {
             return this.View();
         }
 
         [HttpPost]
-        internal ActionResult Update(int id)
+        public ActionResult Update(int id)
         {
             return this.View();
         }
 
         [HttpGet]
-        internal ActionResult Delete()
+        public ActionResult Delete()
         {
             return this.View();
         }
 
         [HttpPost]
-        internal ActionResult Delete(int id)
+        public ActionResult Delete(int id)
         {
             return this.View();
         }

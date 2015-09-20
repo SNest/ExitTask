@@ -23,10 +23,11 @@ textarea, select {
 }
 
 
-/*.mdl-cell {
-    background: black;
-    opacity: 0.5;
-}*/
+.mdl-cell {
+    background: white;
+    z-index: 4;
+    padding: 15px;
+}
 
 .mdl-layout__content {
     display: -webkit-flex;

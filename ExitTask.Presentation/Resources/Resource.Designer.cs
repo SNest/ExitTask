@@ -178,11 +178,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Конечный город.
+        /// </summary>
+        public static string FinishCity {
+            get {
+                return ResourceManager.GetString("FinishCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Имя.
         /// </summary>
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Гостиница.
+        /// </summary>
+        public static string Hotel {
+            get {
+                return ResourceManager.GetString("Hotel", resourceCulture);
             }
         }
         
@@ -277,6 +295,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Картинка.
+        /// </summary>
+        public static string Picture {
+            get {
+                return ResourceManager.GetString("Picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Поле &quot;Описание&quot; является обязательным.
         /// </summary>
         public static string RequiredDescription {
@@ -354,6 +381,15 @@ namespace Resources {
         public static string Stars {
             get {
                 return ResourceManager.GetString("Stars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Начальный город.
+        /// </summary>
+        public static string StartCity {
+            get {
+                return ResourceManager.GetString("StartCity", resourceCulture);
             }
         }
         

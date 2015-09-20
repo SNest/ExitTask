@@ -9,6 +9,7 @@
     <link href="~/Content/bootstrap-material-styles/roboto.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-material-styles/material.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-material-styles/ripples.min.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-material-styles/material-fullpalette.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -17,7 +18,7 @@
     <main class="mdl-layout__content">
         <div class="page-content">
             <div class="content mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col ">@(this.RenderBody())</div>
+                <div class="mdl-cell mdl-cell--8-col shadow-z-3">@(this.RenderBody())</div>
             </div>
         </div>
 
@@ -28,9 +29,10 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/material.min.js"></script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/bootstrap-material-scripts/ripples.min.js"></script>
-    <script src="~/Scripts/bootstrap-material-scripts/material.min.js"></script>
+<script src="~/Scripts/bootstrap-material-scripts/material.min.js"></script>
+    <script>$.material.init()</script>
 
 </body>
 </html>

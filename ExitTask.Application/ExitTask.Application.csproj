@@ -66,6 +66,7 @@
     <Compile Include="DTOs\Concrete\CityDto.cs" />
     <Compile Include="DTOs\Concrete\CountryDto.cs" />
     <Compile Include="DTOs\Concrete\Enum\CountryDtoMainland.cs" />
+    <Compile Include="DTOs\Concrete\Enum\HotelDtoType.cs" />
     <Compile Include="DTOs\Concrete\Enum\TourDtoFeeding.cs" />
     <Compile Include="DTOs\Concrete\Enum\TourDtoState.cs" />
     <Compile Include="DTOs\Concrete\Enum\TourDtoType.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="DTOs\Concrete\Enum\UserDtoSex.cs" />
     <Compile Include="DTOs\Concrete\Enum\UserDtoState.cs" />
     <Compile Include="DTOs\Concrete\HotelDto.cs" />
-    <Compile Include="DTOs\Concrete\RouteDto.cs" />
     <Compile Include="DTOs\Concrete\TourDto.cs" />
     <Compile Include="DTOs\Concrete\TourPreviewDto.cs" />
     <Compile Include="DTOs\Concrete\UserDto.cs" />

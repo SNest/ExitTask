@@ -18,7 +18,6 @@
         public DateTime NightNumber { get; set; }
 
         public decimal Price { get; set; }
-
        
         public TourDtoState State { get; set; }
     }

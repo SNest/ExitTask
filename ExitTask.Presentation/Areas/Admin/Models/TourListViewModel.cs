@@ -23,8 +23,6 @@
 
         public TourDtoState State { get; set; }
 
-        public int? RouteId { get; set; }
-
         public byte[] Image { get; set; }
     }
 }
