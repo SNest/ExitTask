@@ -14,7 +14,7 @@ html {
 
 input,
 select,
-textarea {
+textarea, select {
     max-width: 280px;
 }
 
@@ -23,10 +23,10 @@ textarea {
 }
 
 
-.mdl-cell {
+/*.mdl-cell {
     background: black;
     opacity: 0.5;
-}
+}*/
 
 .mdl-layout__content {
     display: -webkit-flex;

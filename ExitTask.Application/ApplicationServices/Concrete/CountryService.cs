@@ -42,6 +42,12 @@
             return result;
         }
 
+        public CountryDto GetCountry(string name)
+        {
+            var result = Mapper.Map<CountryDto>(this.unitOfWork.Entities<Country, int>().Find(country=>country.Name == name).FirstOrDefault());
+            return result;
+        }
+
         public void CreateCountry(CountryDto input)
         {
             var instanse = Mapper.Map<Country>(input);

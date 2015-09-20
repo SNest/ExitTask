@@ -2,31 +2,31 @@
 {
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Presentation.Areas.Admin.Models;
+    using ExitTask.Presentation.Filters;
 
     using FluentValidation;
 
     using Resources;
 
+    [Culture]
     public class CountryViewModelValidator : AbstractValidator<CountryViewModel>
     {
         private readonly ICountryService countryService;
-
-        public CountryViewModelValidator()
-        {
-
-        }
 
         public CountryViewModelValidator(ICountryService countryService)
         {
             this.countryService = countryService;
 
-            this.RuleFor(x => x.Name).NotNull().WithMessage(Resource.RequiredName).Length(0, 100);
-            this.RuleFor(x => x.Description).NotNull().WithMessage(Resource.RequiredDescription);
+            this.RuleFor(x => x.Name).Must(this.BeUniqueCountryName).WithLocalizedMessage(() => Resource.UniqueCountyName);
+            this.RuleFor(x => x.Name).NotNull().WithLocalizedMessage(() => Resource.RequiredField);
+            this.RuleFor(x => x.Name).Length(2, 100).WithLocalizedMessage(() => Resource.CountryNameLength);
+
+            this.RuleFor(x => x.Description).NotNull().WithLocalizedMessage(() => Resource.RequiredField);
         }
 
         private bool BeUniqueCountryName(string name)
         {
-            return this.countryService.FindCountries(c=>c.Name == name) == null;
+            return this.countryService.GetCountry(name) == null;
         }
     }
 }

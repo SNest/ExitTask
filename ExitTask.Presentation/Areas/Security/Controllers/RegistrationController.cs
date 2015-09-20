@@ -1,6 +1,8 @@
 ﻿namespace ExitTask.Presentation.Areas.Security.Controllers
 {
     using System;
+    using System.IO;
+    using System.Web;
     using System.Web.Mvc;
 
     using AutoMapper;
@@ -46,7 +48,7 @@
                     return this.RedirectToAction("Index", "Home", new { area = "Common" });
                 }
             }
-            return View(model);
+            return this.View(model);
         }
 
         //public ActionResult Profile()

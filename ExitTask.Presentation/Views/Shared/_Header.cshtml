@@ -1,28 +1,29 @@
-﻿    <header class="mdl-layout__header mdl-layout__header--transparent">
+﻿@using Resources
+    <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">This is a title of the page</span>
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="">Link</a>
-                @if (User.Identity.IsAuthenticated)
+                @if (this.User.Identity.IsAuthenticated)
                 {
-                    <a class="mdl-navigation__link" href="/Security/Authorization/SignOut">@Resources.Resource.SignOut</a>
+                    <a class="mdl-navigation__link" href="/Security/Authorization/SignOut">@Resource.SignOut</a>
                 }
                 else
                 {
-                    <a class="mdl-navigation__link" href="/Security/Registration/SignUp">@Resources.Resource.SignUp</a>
-                    <a class="mdl-navigation__link" href="/Security/Authorization/SignIn">@Resources.Resource.SignIn</a>
+                    <a class="mdl-navigation__link" href="/Security/Registration/SignUp">@Resource.SignUp</a>
+                    <a class="mdl-navigation__link" href="/Security/Authorization/SignIn">@Resource.SignIn</a>
                 }
                 
             </nav>
         </div>
     </header>
     <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">@Resource.Management</span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">@Resource.Tours</a>
+            <a class="mdl-navigation__link" href="">@Resource.Countries</a>
+            <a class="mdl-navigation__link" href="">@Resource.Cities</a>
+            <a class="mdl-navigation__link" href="">@Resource.Hotels</a>
         </nav>
     </div>

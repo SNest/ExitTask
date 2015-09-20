@@ -11,13 +11,13 @@
         public EfContext()
             : base("DbConnection")
         {
-            //Database.SetInitializer(new ContextInitializer());
+            Database.SetInitializer(new ContextInitializer());
         }
 
         public EfContext(string connectionString)
             : base(connectionString)
         {
-            //Database.SetInitializer(new ContextInitializer());
+            Database.SetInitializer(new ContextInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -123,6 +123,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-material-styles\material-fullpalette.css" />
+    <Content Include="Content\bootstrap-material-styles\material-fullpalette.min.css" />
+    <Content Include="Content\bootstrap-material-styles\material.css" />
+    <Content Include="Content\bootstrap-material-styles\material.min.css" />
+    <Content Include="Content\bootstrap-material-styles\ripples.css" />
+    <Content Include="Content\bootstrap-material-styles\ripples.min.css" />
+    <Content Include="Content\bootstrap-material-styles\roboto.css" />
+    <Content Include="Content\bootstrap-material-styles\roboto.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -130,6 +138,8 @@
     <Content Include="Content\Images\airplane2.png" />
     <Content Include="Content\material.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\bootstrap-material-fonts\LICENSE.txt" />
+    <Content Include="fonts\bootstrap-material-fonts\Material-Design-Icons.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -140,6 +150,10 @@
     <Content Include="Areas\Common\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Common\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Common\Views\Home\Index.cshtml" />
+    <Content Include="Scripts\bootstrap-material-scripts\material.js" />
+    <Content Include="Scripts\bootstrap-material-scripts\material.min.js" />
+    <Content Include="Scripts\bootstrap-material-scripts\ripples.js" />
+    <Content Include="Scripts\bootstrap-material-scripts\ripples.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -209,10 +223,34 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Areas\Admin\Views\GeoManagement\AddCountry.cshtml" />
     <Content Include="Areas\Security\Views\Registration\SignUp.cshtml" />
     <Content Include="Areas\Security\Views\Authorization\SignIn.cshtml" />
+    <Content Include="Areas\Admin\Views\GeoManagement\AddCountry.cshtml" />
+    <Content Include="Areas\Admin\Views\GeoManagement\AddCity.cshtml" />
+    <Content Include="Areas\Admin\Views\GeoManagement\AddHotel.cshtml" />
+    <Content Include="Content\bootstrap-material-styles\material-fullpalette.css.map" />
+    <Content Include="Content\bootstrap-material-styles\material-fullpalette.min.css.map" />
+    <Content Include="Content\bootstrap-material-styles\material.css.map" />
+    <Content Include="Content\bootstrap-material-styles\material.min.css.map" />
+    <Content Include="Content\bootstrap-material-styles\ripples.css.map" />
+    <Content Include="Content\bootstrap-material-styles\ripples.min.css.map" />
+    <Content Include="Content\bootstrap-material-styles\roboto.css.map" />
+    <Content Include="Content\bootstrap-material-styles\roboto.min.css.map" />
+    <Content Include="Scripts\bootstrap-material-scripts\material.min.js.map" />
+    <Content Include="Scripts\bootstrap-material-scripts\ripples.min.js.map" />
+    <Content Include="fonts\bootstrap-material-fonts\Material-Design-Icons.eot" />
+    <Content Include="fonts\bootstrap-material-fonts\Material-Design-Icons.ttf" />
+    <Content Include="fonts\bootstrap-material-fonts\Material-Design-Icons.woff" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftBold.woff" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftBold.woff2" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftItalic.woff" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftItalic.woff2" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftMedium.woff" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftMedium.woff2" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftRegular.woff" />
+    <Content Include="fonts\bootstrap-material-fonts\RobotoDraftRegular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

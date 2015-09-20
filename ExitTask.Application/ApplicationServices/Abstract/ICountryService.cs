@@ -13,6 +13,8 @@
 
         CountryDto GetCountry(int id);
 
+        CountryDto GetCountry(string name);
+
         void CreateCountry(CountryDto input);
 
         void UpdateCountry(CountryDto input);

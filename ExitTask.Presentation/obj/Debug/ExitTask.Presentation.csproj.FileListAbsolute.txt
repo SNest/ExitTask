@@ -46,10 +46,14 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Pr
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\ExitTask.Domain.pdb
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\ExitTask.Infrastructure.pdb
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\NLog.xml
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\da\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\de\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\es\FluentValidation.resources.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\fi\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\fr\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\it\FluentValidation.resources.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\ko\FluentValidation.resources.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\mk\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\nl\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\pl\FluentValidation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\pt\FluentValidation.resources.dll
@@ -59,7 +63,3 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Pr
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\uk-UA\ExitTask.Presentation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\ExitTask.Presentation.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\ExitTask.Presentation.pdb
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\da\FluentValidation.resources.dll
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\fi\FluentValidation.resources.dll
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\ko\FluentValidation.resources.dll
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\mk\FluentValidation.resources.dll

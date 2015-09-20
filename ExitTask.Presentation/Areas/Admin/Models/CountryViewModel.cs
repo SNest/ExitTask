@@ -7,6 +7,7 @@
     using ExitTask.Presentation.Models;
 
     using FluentValidation.Attributes;
+    using System.Web.Mvc;
 
     [Validator(typeof(CountryViewModelValidator))]
     public class CountryViewModel : ViewModel<int>
@@ -17,8 +18,6 @@
 
         public CountryDtoMainland Mainland { get; set; }
 
-        public ICollection<CityViewModel> Cities { get; set; }
+        public IEnumerable<CityViewModel> Cities { get; set; }
     }
-
-    
 }

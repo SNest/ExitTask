@@ -24,8 +24,6 @@
 
         public UserDtoSex Sex { get; set; }
 
-        public byte[] Avatar { get; set; }
-
         public CityDto City { get; set; }
     }
 }

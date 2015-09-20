@@ -19,8 +19,6 @@
 
         public UserDtoState State { get; set; }
 
-        public byte[] Avatar { get; set; }
-
         public CityDto City { get; set; }
     }
 }

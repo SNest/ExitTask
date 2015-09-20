@@ -7,16 +7,16 @@
 
     public class User : Entity<int>
     {
-        [Required]
+        [Required, DataType(DataType.Text)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required, DataType(DataType.Text)]
         public string LastName { get; set; }
 
-        [Required]
+        [Required, DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Required]
+        [Required, DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Required]
@@ -25,9 +25,8 @@
         [Required]
         public UserRole Role { get; set; }
 
+        [Required]
         public UserState State { get; set; }
-
-        public byte[] Avatar { get; set; }
 
         public int? CityId { get; set; }
 

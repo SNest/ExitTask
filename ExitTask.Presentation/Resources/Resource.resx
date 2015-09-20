@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Avatar" xml:space="preserve">
+    <value>Аватар</value>
+  </data>
+  <data name="Cities" xml:space="preserve">
+    <value>Города</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Страны</value>
+  </data>
   <data name="Country" xml:space="preserve">
     <value>Страна</value>
+  </data>
+  <data name="CountryNameLength" xml:space="preserve">
+    <value>Длина строки должна находится в пределах от 2 до 100 символов</value>
   </data>
   <data name="CultureLink" xml:space="preserve">
     <value>Укр. / Рус.</value>
@@ -126,17 +141,50 @@
   <data name="Customer" xml:space="preserve">
     <value>Клиент</value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Почта</value>
+  </data>
+  <data name="EmailConfirmation" xml:space="preserve">
+    <value>Подтвердите почту</value>
+  </data>
   <data name="EmailConfirmationFail" xml:space="preserve">
     <value>Почтовые ящики не совпадают</value>
   </data>
   <data name="EmailUnique" xml:space="preserve">
     <value />
   </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Hotels" xml:space="preserve">
+    <value>Гостиницы</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Mainland" xml:space="preserve">
+    <value>Часть света</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Управление</value>
+  </data>
   <data name="MaxStringLengthFail" xml:space="preserve">
     <value>Строка слишком длинная</value>
   </data>
   <data name="MinStringLengthFail" xml:space="preserve">
     <value>Строка слишком короткая</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordConfirmation" xml:space="preserve">
+    <value>Подтвердите пароль</value>
   </data>
   <data name="PasswordConfirmationFail" xml:space="preserve">
     <value>Пароли не совпадают</value>
@@ -153,8 +201,8 @@
   <data name="RequiredName" xml:space="preserve">
     <value>Поле "Имя" является обязательным</value>
   </data>
-  <data name="RequiredPassword" xml:space="preserve">
-    <value />
+  <data name="Sex" xml:space="preserve">
+    <value>Пол</value>
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Войти</value>
@@ -164,5 +212,17 @@
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Зарегистрироваться</value>
+  </data>
+  <data name="Stars" xml:space="preserve">
+    <value>Количество звезд</value>
+  </data>
+  <data name="Tours" xml:space="preserve">
+    <value>Туры</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="UniqueCountyName" xml:space="preserve">
+    <value>Страна с таким названием уже есть в базе</value>
   </data>
 </root>
