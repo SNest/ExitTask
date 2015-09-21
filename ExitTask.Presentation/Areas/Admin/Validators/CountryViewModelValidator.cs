@@ -17,11 +17,11 @@
         {
             this.countryService = countryService;
 
-            this.RuleFor(x => x.Name).Must(this.BeUniqueCountryName).WithLocalizedMessage(() => Resource.UniqueCountyName);
+            this.RuleFor(x => x.Name).Must(this.BeUniqueCountryName).WithLocalizedMessage(() => Resource.UniqueCountyName).WithName("DSDSD");
             this.RuleFor(x => x.Name).NotNull().WithLocalizedMessage(() => Resource.RequiredField);
             this.RuleFor(x => x.Name).Length(2, 100).WithLocalizedMessage(() => Resource.CountryNameLength);
 
-            this.RuleFor(x => x.Description).NotNull().WithLocalizedMessage(() => Resource.RequiredField);
+            
         }
 
         private bool BeUniqueCountryName(string name)

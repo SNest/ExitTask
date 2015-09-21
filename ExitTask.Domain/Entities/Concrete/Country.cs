@@ -1,7 +1,6 @@
 ﻿namespace ExitTask.Domain.Entities.Concrete
 {
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
 
     using ExitTask.Domain.Entities.Abstract;
     using ExitTask.Domain.Entities.Concrete.Enum;
@@ -13,11 +12,25 @@
             this.Cities = new HashSet<City>();
         }
 
-        [Required]
         public string Name { get; set; }
 
-        [Required]
-        public string Description { get; set; }
+        public string Capital { get; set; }
+
+        public string Population { get; set; }
+
+        public string Geography { get; set; }
+
+        public string Climate { get; set; }
+
+        public string Language { get; set; }
+
+        public string Worship { get; set; }
+
+        public string PoliticalStructure { get; set; }
+
+        public string TimeZone { get; set; }
+
+        public string Currency { get; set; }
 
         public CountryMainland Mainland { get; set; }
 

@@ -60,6 +60,18 @@
             return this.View(model);
         }
 
+
+        private static byte[] FileToBytes(HttpPostedFileBase file)
+        {
+            if (file == null)
+            {
+                return new byte[0];
+            }
+            var target = new MemoryStream();
+            file.InputStream.CopyTo(target);
+            return target.ToArray();
+        }
+
         [HttpPost]
         public ActionResult AddTour(TourViewModel model, HttpPostedFileBase picture)
         {
@@ -67,17 +79,9 @@
             {
                 try
                 {
-                    if (picture != null)
-                    {
-                        var target = new MemoryStream();
-                        picture.InputStream.CopyTo(target);
-                        model.Image = target.ToArray();
-                    }
-                    else
-                    {
-                        
-                    }
-
+                    Mapper.CreateMap<TourViewModel, TourDto>()
+                        .ForMember(dest => dest.Image, opt => opt.MapFrom(src => FileToBytes(src.Image)));
+                    model.Image = picture;
                     var tour = Mapper.Map<TourDto>(model);
                     this.tourService.CreateTour(tour);
                     this.tourService.Commit();

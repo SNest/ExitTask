@@ -120,6 +120,12 @@
   <data name="Avatar" xml:space="preserve">
     <value>Аватар</value>
   </data>
+  <data name="BeginArrivalTime" xml:space="preserve">
+    <value>Начальная дата прибытия</value>
+  </data>
+  <data name="BeginDepartureTime" xml:space="preserve">
+    <value>Начальная дата отъезда</value>
+  </data>
   <data name="Cities" xml:space="preserve">
     <value>Города</value>
   </data>
@@ -156,6 +162,15 @@
   <data name="EmailUnique" xml:space="preserve">
     <value />
   </data>
+  <data name="EndArrivalTime" xml:space="preserve">
+    <value>Конечная дата прибытия</value>
+  </data>
+  <data name="EndDepartureTime" xml:space="preserve">
+    <value>Конечная дата отъезда</value>
+  </data>
+  <data name="Feeding" xml:space="preserve">
+    <value>Питание</value>
+  </data>
   <data name="FinishCity" xml:space="preserve">
     <value>Конечный город</value>
   </data>
@@ -167,6 +182,9 @@
   </data>
   <data name="Hotels" xml:space="preserve">
     <value>Гостиницы</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Изображение</value>
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Фамилия</value>
@@ -195,8 +213,14 @@
   <data name="PasswordConfirmationFail" xml:space="preserve">
     <value>Пароли не совпадают</value>
   </data>
+  <data name="PersonNumber" xml:space="preserve">
+    <value>Количество человек</value>
+  </data>
   <data name="Picture" xml:space="preserve">
     <value>Картинка</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
   </data>
   <data name="RequiredDescription" xml:space="preserve">
     <value>Поле "Описание" является обязательным</value>
@@ -227,6 +251,9 @@
   </data>
   <data name="StartCity" xml:space="preserve">
     <value>Начальный город</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Состояние</value>
   </data>
   <data name="Tours" xml:space="preserve">
     <value>Туры</value>

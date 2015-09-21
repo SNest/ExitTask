@@ -22,6 +22,14 @@
             Mapper.CreateMap<Tour, TourDto>();
             Mapper.CreateMap<TourDto, Tour>();
             Mapper.CreateMap<Tour, TourPreviewDto>();
+            Mapper.CreateMap<City, CityDto>();
+            Mapper.CreateMap<CityDto, City>();
+            Mapper.CreateMap<Country, CountryDto>();
+            Mapper.CreateMap<CountryDto, Country>();
+            Mapper.CreateMap<User, UserDto>();
+            Mapper.CreateMap<UserDto, User>();
+            Mapper.CreateMap<Hotel, HotelDto>();
+            Mapper.CreateMap<HotelDto, Hotel>();
         }
 
         public IEnumerable<TourPreviewDto> GetTourPreviews()

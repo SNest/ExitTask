@@ -1,8 +1,8 @@
-﻿@using Resources
-@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
+﻿@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
 
 @{
     this.ViewBag.Title = "Index";
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -19,10 +19,31 @@
             @(this.Html.DisplayNameFor(model => model.Description))
         </th>
         <th>
-            @(this.Html.DisplayNameFor(model => model.Type))
+            @(this.Html.DisplayNameFor(model => model.BeginDepartureTime))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.BeginArrivalTime))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.EndDepartureTime))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.EndArrivalTime))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.PersonNumber))
         </th>
         <th>
             @(this.Html.DisplayNameFor(model => model.Price))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.StartCityId))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.EndCityId))
+        </th>
+        <th>
+            @(this.Html.DisplayNameFor(model => model.HotelId))
         </th>
         <th></th>
     </tr>
@@ -36,10 +57,31 @@
             @(this.Html.DisplayFor(modelItem => item.Description))
         </td>
         <td>
-            @(this.Html.DisplayFor(modelItem => item.Type))
+            @(this.Html.DisplayFor(modelItem => item.BeginDepartureTime))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.BeginArrivalTime))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.EndDepartureTime))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.EndArrivalTime))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.PersonNumber))
         </td>
         <td>
             @(this.Html.DisplayFor(modelItem => item.Price))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.StartCityId))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.EndCityId))
+        </td>
+        <td>
+            @(this.Html.DisplayFor(modelItem => item.HotelId))
         </td>
         <td>
             @(this.Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })) |
@@ -49,5 +91,6 @@
     </tr>
 }
 
-    @Resource.Country
+   
+
 </table>

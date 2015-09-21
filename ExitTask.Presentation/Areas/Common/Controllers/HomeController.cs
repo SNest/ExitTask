@@ -26,7 +26,7 @@
         public ActionResult Index()
         {
             Mapper.CreateMap<TourDto, TourViewModel>();
-            return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetTourPreviews()));
+            return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours()));
         }
 
         public ActionResult ChangeCulture(string lang)

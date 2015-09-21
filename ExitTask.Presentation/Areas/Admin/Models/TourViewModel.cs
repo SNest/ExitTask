@@ -33,7 +33,7 @@
 
         public TourDtoState State { get; set; }
 
-        public byte[] Image { get; set; }
+        public HttpPostedFileBase Image { get; set; }
         
         public int? StartCityId { get; set; }
 

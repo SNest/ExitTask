@@ -10,7 +10,13 @@
     <link href="~/Content/bootstrap-material-styles/material.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-material-styles/ripples.min.css" rel="stylesheet"/>
     <link href="~/Content/bootstrap-material-styles/material-fullpalette.min.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css"/>
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.bootstrap.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
 </head>
 <body>
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
@@ -22,17 +28,32 @@
             </div>
         </div>
 
+
+
+        @*<div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+                <h3><a href="entry.html">Coffee Pic</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                <div class="minilogo"></div>
+                <div>
+                    <strong>The Newist</strong>
+                    <span>2 days ago</span>
+                </div>
+            </div>
+        </div>*@
+
+
     </main>
     @(this.Html.Partial("_Footer"))
-    <div class="mdl-layout__obfuscator"></div>
 </div>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/Scripts/material.min.js"></script>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/bootstrap-material-scripts/ripples.min.js"></script>
-<script src="~/Scripts/bootstrap-material-scripts/material.min.js"></script>
-    <script>$.material.init()</script>
+    <script src="~/Scripts/bootstrap-material-scripts/material.min.js"></script>
+    <script> $.material.init() </script>
+
 
 </body>
 </html>

@@ -21,6 +21,8 @@
             this.unitOfWork = unitOfWork;
             Mapper.CreateMap<City, CityDto>();
             Mapper.CreateMap<CityDto, City>();
+            Mapper.CreateMap<Country, CountryDto>();
+            Mapper.CreateMap<CountryDto, Country>();
         }
 
         public IEnumerable<CityDto> GetAllCitys()
