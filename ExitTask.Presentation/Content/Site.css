@@ -38,6 +38,26 @@ label {
     color: #fff;
 }
 
+.demo-card-square-2.mdl-card {
+    width: 900px;
+    height: 100%;
+}
+
+.desc-lable {
+    float: left
+}
+
+p {
+    margin-left: 50px;
+}
+.details-link {
+    float: right;
+}
+
+.hot-ico {
+     float: right;
+}
+
 input,
 select,
 textarea, select {

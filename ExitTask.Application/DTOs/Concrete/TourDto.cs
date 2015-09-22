@@ -35,7 +35,7 @@
 
         public int? StartCityId { get; set; }
 
-        public int? EndCityId { get; set; }
+        public int? FinishCityId { get; set; }
 
         public int? HotelId { get; set; }
 

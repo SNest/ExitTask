@@ -70,7 +70,7 @@
                 <div class="form-group">
                     @(this.Html.Label(Resource.FinishCity, new { @class = "control-label col-md-2" }))
                     <div class="col-md-4">
-                        @(this.Html.DropDownListFor(model => model.EndCityId, this.Model.Cities, new { @class = "form-control" }))
+                        @(this.Html.DropDownListFor(model => model.FinishCityId, this.Model.Cities, new { @class = "form-control" }))
                         @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="form-group">
                     @(this.Html.Label(Resource.PersonNumber, new { @class = "control-label col-md-2" }))
                     <div class="col-md-4">
-                        @(this.Html.EditorFor(model => model.PersonNumber, new { htmlAttributes = new { @class = "form-control mdl-slider mdl-js-slider", type = "number" } }))
+                        @(this.Html.EditorFor(model => model.PersonNumber, new { htmlAttributes = new { @class = "form-control", type = "number" } }))
                         @(this.Html.ValidationMessageFor(model => model.PersonNumber, "", new { @class = "text-danger" }))
                     </div>
                 </div>
@@ -141,7 +141,8 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Create" class="btn btn-default"/>
+                        <input type="button" value="@Resource.Cencel" class="btn btn-default" onclientclick="this.form.reset(); return false;"    />
+                        <input type="submit" value="@Resource.Add" class="btn btn-default"/>
                     </div>
                 </div>
             </div>

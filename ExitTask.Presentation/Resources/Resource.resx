@@ -129,6 +129,9 @@
   <data name="Avatar" xml:space="preserve">
     <value>Аватар</value>
   </data>
+  <data name="Book" xml:space="preserve">
+    <value>Забронировать</value>
+  </data>
   <data name="Capital" xml:space="preserve">
     <value>Столица</value>
   </data>

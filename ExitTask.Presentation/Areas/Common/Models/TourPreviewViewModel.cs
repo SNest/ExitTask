@@ -2,6 +2,7 @@
 {
     using System;
 
+    using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Application.DTOs.Concrete.Enum;
     using ExitTask.Presentation.Models;
 
@@ -20,6 +21,10 @@
         public TourDtoState State { get; set; }
 
         public byte[] Image { get; set; }
+
+        public int? FinishCityId { get; set; }
+
+        public CityDto FinishCity { get; set; }
 
     }
 }

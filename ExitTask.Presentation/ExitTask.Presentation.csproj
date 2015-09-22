@@ -138,6 +138,7 @@
     <Content Include="Content\fonts\LICENSE.txt" />
     <Content Include="Content\fonts\Material-Design-Icons.svg" />
     <Content Include="Content\Images\airplane2.png" />
+    <Content Include="Content\Images\fire.ico" />
     <Content Include="Content\jquery.validate.bootstrap.css" />
     <Content Include="Content\material.min.css" />
     <Content Include="Content\Site.css" />

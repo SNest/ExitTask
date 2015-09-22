@@ -28,7 +28,7 @@
         [HttpGet]
         public ActionResult Index()
         {
-            return this.View(Mapper.Map<List<TourPreviewViewModel>>(this.tourService.GetAllTours()));
+            return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours()));
         }
 
         public ActionResult ChangeCulture(string lang)

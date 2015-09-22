@@ -15,3 +15,4 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.In
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.pdb
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.Migrations.M1.resources
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.csproj.GenerateResource.Cache
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Infrastructure\obj\Debug\ExitTask.Infrastructure.Migrations.M2.resources
