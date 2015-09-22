@@ -1,11 +1,8 @@
 ﻿namespace ExitTask.Presentation.Areas.Security.Validators
 {
-    using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Presentation.Areas.Security.Models;
 
     using FluentValidation;
-
-    using Resources;
 
     public class UserRegistrationViewModelValidator : AbstractValidator<UserRegistrationViewModel>
     {

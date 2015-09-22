@@ -1,0 +1,12 @@
+﻿@using ExitTask.Presentation.Helpers
+@model ExitTask.Presentation.Areas.Common.Models.TourViewModel
+
+@{
+    this.ViewBag.Title = "TourDetails";
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="tour-grid mdl-grid">
+    @(this.Html.TourCard(this.Model))
+</div>

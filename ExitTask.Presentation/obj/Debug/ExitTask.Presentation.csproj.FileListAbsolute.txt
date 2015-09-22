@@ -63,4 +63,3 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Pr
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\uk-UA\ExitTask.Presentation.resources.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\ExitTask.Presentation.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\obj\Debug\ExitTask.Presentation.pdb
-C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Presentation\bin\NLog.config

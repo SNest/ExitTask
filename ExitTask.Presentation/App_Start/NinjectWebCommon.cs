@@ -10,11 +10,9 @@ namespace ExitTask.Presentation
     using System;
     using System.Reflection;
     using System.Web;
-    using System.Web.Security;
 
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Application.ApplicationServices.Concrete;
-    using ExitTask.Application.Providers;
     using ExitTask.DependencyResolver.Modules;
     using ExitTask.Presentation.Util;
 

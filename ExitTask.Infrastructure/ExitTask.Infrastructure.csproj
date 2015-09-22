@@ -59,9 +59,9 @@
     <Compile Include="Context\Abstract\IContext.cs" />
     <Compile Include="Context\Concrete\ContextInitializer.cs" />
     <Compile Include="Context\Concrete\EfContext.cs" />
-    <Compile Include="Migrations\201509211744297_M1.cs" />
-    <Compile Include="Migrations\201509211744297_M1.Designer.cs">
-      <DependentUpon>201509211744297_M1.cs</DependentUpon>
+    <Compile Include="Migrations\201509212228146_M1.cs" />
+    <Compile Include="Migrations\201509212228146_M1.Designer.cs">
+      <DependentUpon>201509212228146_M1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,8 +86,8 @@
     <Folder Include="Concrete\DomainServices\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509211744297_M1.resx">
-      <DependentUpon>201509211744297_M1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509212228146_M1.resx">
+      <DependentUpon>201509212228146_M1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

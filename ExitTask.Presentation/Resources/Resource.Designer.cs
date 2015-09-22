@@ -61,6 +61,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Добавить.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Добавить тур.
+        /// </summary>
+        public static string AddTour {
+            get {
+                return ResourceManager.GetString("AddTour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата прибытия.
+        /// </summary>
+        public static string ArrivalDate {
+            get {
+                return ResourceManager.GetString("ArrivalDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Аватар.
         /// </summary>
         public static string Avatar {
@@ -70,20 +97,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Начальная дата прибытия.
+        ///   Looks up a localized string similar to Столица.
         /// </summary>
-        public static string BeginArrivalTime {
+        public static string Capital {
             get {
-                return ResourceManager.GetString("BeginArrivalTime", resourceCulture);
+                return ResourceManager.GetString("Capital", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Начальная дата отъезда.
+        ///   Looks up a localized string similar to Отмена.
         /// </summary>
-        public static string BeginDepartureTime {
+        public static string Cencel {
             get {
-                return ResourceManager.GetString("BeginDepartureTime", resourceCulture);
+                return ResourceManager.GetString("Cencel", resourceCulture);
             }
         }
         
@@ -102,6 +129,15 @@ namespace Resources {
         public static string City {
             get {
                 return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Климат.
+        /// </summary>
+        public static string Climate {
+            get {
+                return ResourceManager.GetString("Climate", resourceCulture);
             }
         }
         
@@ -142,6 +178,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Валюта.
+        /// </summary>
+        public static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Клиент.
         /// </summary>
         public static string Customer {
@@ -151,11 +196,65 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Удалить.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Удалить тур.
+        /// </summary>
+        public static string DeleteTour {
+            get {
+                return ResourceManager.GetString("DeleteTour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата отъезда.
+        /// </summary>
+        public static string DepartureDate {
+            get {
+                return ResourceManager.GetString("DepartureDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Описание.
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подробнее.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Изменить.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Редактировать тур.
+        /// </summary>
+        public static string EditTour {
+            get {
+                return ResourceManager.GetString("EditTour", resourceCulture);
             }
         }
         
@@ -196,24 +295,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Конечная дата прибытия.
-        /// </summary>
-        public static string EndArrivalTime {
-            get {
-                return ResourceManager.GetString("EndArrivalTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Конечная дата отъезда.
-        /// </summary>
-        public static string EndDepartureTime {
-            get {
-                return ResourceManager.GetString("EndDepartureTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Питание.
         /// </summary>
         public static string Feeding {
@@ -241,6 +322,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to География.
+        /// </summary>
+        public static string Geography {
+            get {
+                return ResourceManager.GetString("Geography", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Гостиница.
         /// </summary>
         public static string Hotel {
@@ -264,6 +354,15 @@ namespace Resources {
         public static string Image {
             get {
                 return ResourceManager.GetString("Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Язык.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
@@ -363,6 +462,24 @@ namespace Resources {
         public static string Picture {
             get {
                 return ResourceManager.GetString("Picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Политическая структура.
+        /// </summary>
+        public static string PoliticalStructure {
+            get {
+                return ResourceManager.GetString("PoliticalStructure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Население.
+        /// </summary>
+        public static string Population {
+            get {
+                return ResourceManager.GetString("Population", resourceCulture);
             }
         }
         
@@ -475,6 +592,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Временная зона.
+        /// </summary>
+        public static string TimeZone {
+            get {
+                return ResourceManager.GetString("TimeZone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Список туров.
+        /// </summary>
+        public static string TourList {
+            get {
+                return ResourceManager.GetString("TourList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Туры.
         /// </summary>
         public static string Tours {
@@ -498,6 +633,15 @@ namespace Resources {
         public static string UniqueCountyName {
             get {
                 return ResourceManager.GetString("UniqueCountyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вероисповедание.
+        /// </summary>
+        public static string Worship {
+            get {
+                return ResourceManager.GetString("Worship", resourceCulture);
             }
         }
     }

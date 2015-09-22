@@ -5,10 +5,8 @@
     using System.Web.Routing;
     using System.Web.Security;
 
-    using ExitTask.DependencyResolver.Modules;
     using ExitTask.Presentation.Filters;
 
-    using Ninject;
     using Ninject.Web.Common;
 
     public class MvcApplication : HttpApplication

@@ -1,131 +1,150 @@
-﻿@model ExitTask.Presentation.Areas.Admin.Models.TourViewModel
+﻿@using Resources
+@model ExitTask.Presentation.Areas.Admin.Models.TourViewModel
 
 @{
     this.ViewBag.Title = "AddTour";
     this.Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>AddTour</h2>
-
-@using (this.Html.BeginForm("AddTour", "TourManagement", null, FormMethod.Post, new { enctype = "multipart/form-data" })) 
-{
-    @(this.Html.AntiForgeryToken())
-
-    <div class="form-horizontal">
-        <h4>TourViewModel</h4>
-        <hr/>
-
-        @(this.Html.ValidationSummary(true, "", new { @class = "text-danger" }))
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control floating-label", placeholder = Resources.Resource.Name } }))
-                @(this.Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" }))
-            </div>
+<div class="tour-grid mdl-grid mdl-cell--1-col mdl-cell--8-col">
+    <div class="add-tour-card mdl-card mdl-shadow--16dp mdl-cell mdl-cell--8-col mdl-color-text--white">
+        <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--grey-700">
+            <h4>@Resource.AddTour</h4>
         </div>
+        @using (this.Html.BeginForm("AddTour", "TourManagement", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @(this.Html.AntiForgeryToken())
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.TextAreaFor(model => model.Description, new { @class = "form-control floating-label", rows = "5", placeholder = Resources.Resource.Description }))
-                @(this.Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+            <div class="form-horizontal">
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EnumDropDownListFor(model => model.Type, new { @class = "form-control floating-label", placeholder = Resources.Resource.Type }))
-                @(this.Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                @(this.Html.ValidationSummary(true, "", new { @class = "text-danger" }))
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.BeginDepartureTime, new { htmlAttributes = new { @class = "form-control floating-label", type = "date", placeholder = Resources.Resource.BeginDepartureTime } }))
-                @(this.Html.ValidationMessageFor(model => model.BeginDepartureTime, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Name, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } }))
+                        @(this.Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.BeginArrivalTime, new { htmlAttributes = new { @class = "form-control floating-label", type = "date", placeholder = Resources.Resource.BeginArrivalTime } }))
-                @(this.Html.ValidationMessageFor(model => model.BeginArrivalTime, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Description, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5" }))
+                        @(this.Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.EndDepartureTime, new { htmlAttributes = new { @class = "form-control floating-label", type = "date", placeholder = Resources.Resource.EndDepartureTime } }))
-                @(this.Html.ValidationMessageFor(model => model.EndDepartureTime, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Type, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EnumDropDownListFor(model => model.Type, new { @class = "form-control " }))
+                        @(this.Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.EndArrivalTime, new { htmlAttributes = new { @class = "form-control floating-label", type = "date", placeholder = Resources.Resource.EndArrivalTime } }))
-                @(this.Html.ValidationMessageFor(model => model.EndArrivalTime, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.StartCity, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.DropDownListFor(model => model.StartCityId, this.Model.Cities, new { @class = "form-control" }))
+                        @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.PersonNumber, new { htmlAttributes = new { @class = "form-control floating-label", placeholder = Resources.Resource.PersonNumber } }))
-                @(this.Html.ValidationMessageFor(model => model.PersonNumber, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.DepartureDate, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.BeginDepartureTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                        @(this.Html.ValidationMessageFor(model => model.BeginDepartureTime, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EnumDropDownListFor(model => model.Feeding, new { @class = "form-control floating-label", placeholder = Resources.Resource.Feeding }))
-                @(this.Html.ValidationMessageFor(model => model.Feeding, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.ArrivalDate, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.BeginArrivalTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                        @(this.Html.ValidationMessageFor(model => model.BeginArrivalTime, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control floating-label", placeholder = Resources.Resource.Price } }))
-                @(this.Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.FinishCity, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.DropDownListFor(model => model.EndCityId, this.Model.Cities, new { @class = "form-control" }))
+                        @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.EnumDropDownListFor(model => model.State, new { @class = "form-control floating-label", placeholder = Resources.Resource.State }))
-                @(this.Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.DepartureDate, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.EndDepartureTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                        @(this.Html.ValidationMessageFor(model => model.EndDepartureTime, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.Editor("picture", new { htmlAttributes = new { @class = "form-control floating-label", type = "file", placeholder = Resources.Resource.Image } }))
-                @(this.Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.ArrivalDate, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.EndArrivalTime, new { htmlAttributes = new { @class = "form-control", type = "date" } }))
+                        @(this.Html.ValidationMessageFor(model => model.EndArrivalTime, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.DropDownListFor(model => model.StartCityId, this.Model.Cities, new { @class = "form-control floating-label", placeholder = Resources.Resource.City }))
-                @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.PersonNumber, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.PersonNumber, new { htmlAttributes = new { @class = "form-control mdl-slider mdl-js-slider", type = "number" } }))
+                        @(this.Html.ValidationMessageFor(model => model.PersonNumber, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.DropDownListFor(model => model.EndCityId, this.Model.Cities, new { @class = "form-control floating-label", placeholder = Resources.Resource.City }))
-                @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Feeding, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EnumDropDownListFor(model => model.Feeding, new { @class = "form-control" }))
+                        @(this.Html.ValidationMessageFor(model => model.Feeding, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-10">
-                @(this.Html.DropDownListFor(model => model.HotelId, this.Model.Hotels, new { @class = "form-control floating-label", placeholder = Resources.Resource.Hotel }))
-                @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
-            </div>
-        </div>
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Price, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", type = "number" } }))
+                        @(this.Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <div class="form-group">
+                    @(this.Html.Label(Resource.State, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.EnumDropDownListFor(model => model.State, new { @class = "form-control" }))
+                        @(this.Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Image, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.Editor("picture", new { htmlAttributes = new { @class = "form-control", type = "file" } }))
+                        @(this.Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @(this.Html.Label(Resource.Hotel, new { @class = "control-label col-md-2" }))
+                    <div class="col-md-4">
+                        @(this.Html.DropDownListFor(model => model.HotelId, this.Model.Hotels, new { @class = "form-control" }))
+                        @(this.Html.ValidationMessageFor(model => model.StartCity, "", new { @class = "text-danger" }))
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default"/>
+                    </div>
+                </div>
             </div>
-        </div>
+        }
     </div>
-}
-
+</div>

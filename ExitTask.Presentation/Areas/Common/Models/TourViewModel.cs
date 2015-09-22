@@ -1,12 +1,12 @@
 ﻿namespace ExitTask.Presentation.Areas.Common.Models
 {
     using System;
-    using System.Collections.Generic;
 
     using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Application.DTOs.Concrete.Enum;
+    using ExitTask.Presentation.Models;
 
-    public class TourViewModel
+    public class TourViewModel : ViewModel<int>
     {
         public string Name { get; set; }
 

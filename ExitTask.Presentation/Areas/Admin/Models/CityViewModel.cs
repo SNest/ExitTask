@@ -1,11 +1,10 @@
 ﻿namespace ExitTask.Presentation.Areas.Admin.Models
 {
     using System.Collections.Generic;
+    using System.Web.Mvc;
 
     using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Presentation.Models;
-    using System.Web.Mvc;
-
 
     public class CityViewModel : ViewModel<int>
     {

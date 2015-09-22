@@ -1,8 +1,6 @@
 ﻿namespace ExitTask.Presentation.Areas.Security.Controllers
 {
     using System;
-    using System.IO;
-    using System.Web;
     using System.Web.Mvc;
 
     using AutoMapper;

@@ -7,7 +7,6 @@
     using ExitTask.Presentation.Models;
 
     using FluentValidation.Attributes;
-    using System.Web.Mvc;
 
     [Validator(typeof(CountryViewModelValidator))]
     public class CountryViewModel : ViewModel<int>

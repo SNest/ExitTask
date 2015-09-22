@@ -1,96 +1,14 @@
-﻿@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
+﻿@using ExitTask.Presentation.Helpers
+@model IEnumerable<ExitTask.Presentation.Areas.Common.Models.TourPreviewViewModel>
 
 @{
     this.ViewBag.Title = "Index";
     this.Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<p>
-    @(this.Html.ActionLink("Create New", "Create"))
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.Name))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.Description))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.BeginDepartureTime))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.BeginArrivalTime))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.EndDepartureTime))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.EndArrivalTime))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.PersonNumber))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.Price))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.StartCityId))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.EndCityId))
-        </th>
-        <th>
-            @(this.Html.DisplayNameFor(model => model.HotelId))
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in this.Model) {
-    <tr>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.Name))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.Description))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.BeginDepartureTime))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.BeginArrivalTime))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.EndDepartureTime))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.EndArrivalTime))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.PersonNumber))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.Price))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.StartCityId))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.EndCityId))
-        </td>
-        <td>
-            @(this.Html.DisplayFor(modelItem => item.HotelId))
-        </td>
-        <td>
-            @(this.Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })) |
-            @(this.Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })) |
-            @(this.Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }))
-        </td>
-    </tr>
-}
-
-   
-
-</table>
+<div class="tour-grid mdl-grid">
+    @foreach (var item in this.Model)
+    {
+        @(this.Html.TourPreviewCard(item))
+    }
+</div>

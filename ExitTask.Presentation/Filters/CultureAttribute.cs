@@ -15,7 +15,7 @@
             var cultureName = cultureCookie != null ? cultureCookie.Value : "ru";
 
             // Список культур
-            var cultures = new List<string>() { "ru", "uk-UA" };
+            var cultures = new List<string> { "ru", "uk-UA" };
             if (!cultures.Contains(cultureName))
             {
                 cultureName = "ru";

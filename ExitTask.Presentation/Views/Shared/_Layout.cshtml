@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@(this.ViewBag.Title) - My ASP.NET Application</title>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/material.min.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-material-styles/roboto.min.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-material-styles/material.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/material.min.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-material-styles/roboto.min.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-material-styles/material.min.css" rel="stylesheet"/>
     <link href="~/Content/bootstrap-material-styles/ripples.min.css" rel="stylesheet"/>
-    <link href="~/Content/bootstrap-material-styles/material-fullpalette.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-material-styles/material-fullpalette.min.css" rel="stylesheet"/>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css"/>
 
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>
@@ -23,36 +23,21 @@
     @(this.Html.Partial("_Header"))
     <main class="mdl-layout__content">
         <div class="page-content">
-            <div class="content mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col shadow-z-3">@(this.RenderBody())</div>
-            </div>
+            @(this.RenderBody())
         </div>
-
-
-
-        @*<div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-                <h3><a href="entry.html">Coffee Pic</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                <div class="minilogo"></div>
-                <div>
-                    <strong>The Newist</strong>
-                    <span>2 days ago</span>
-                </div>
-            </div>
-        </div>*@
-
-
+        @(this.Html.Partial("_Footer"))
     </main>
-    @(this.Html.Partial("_Footer"))
 </div>
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <script src="~/Scripts/material.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap-material-scripts/ripples.min.js"></script>
-    <script src="~/Scripts/bootstrap-material-scripts/material.min.js"></script>
-    <script> $.material.init() </script>
+<script src="~/Scripts/modernizr-2.6.2.js"></script>
+<script src="~/Scripts/material.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bootstrap-material-scripts/ripples.min.js"></script>
+<script src="~/Scripts/bootstrap-material-scripts/material.min.js"></script>
+<script>
+    $.material.init();
+    $.material.ripples();
+    $.material.input();
+</script>
 
 
 </body>

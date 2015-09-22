@@ -3,11 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.Web;
+    using System.Web.Mvc;
 
     using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Application.DTOs.Concrete.Enum;
     using ExitTask.Presentation.Models;
-    using System.Web.Mvc;
 
     public class TourViewModel : ViewModel<int>
     {

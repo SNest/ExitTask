@@ -1,18 +1,18 @@
 namespace ExitTask.Infrastructure.Migrations
 {
+    using System;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    using ExitTask.Infrastructure.Context.Concrete;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<EfContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ExitTask.Infrastructure.Context.Concrete.EfContext>
     {
         public Configuration()
         {
-            this.AutomaticMigrationsEnabled = true;
-            this.ContextKey = "ExitTask.Infrastructure.Context.Concrete.EfContext";
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(EfContext context)
+        protected override void Seed(ExitTask.Infrastructure.Context.Concrete.EfContext context)
         {
             //  This method will be called after migrating to the latest version.
 

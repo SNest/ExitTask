@@ -13,7 +13,7 @@ namespace ExitTask.Infrastructure.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201509211744297_M1"; }
+            get { return "201509212228146_M1"; }
         }
         
         string IMigrationMetadata.Source

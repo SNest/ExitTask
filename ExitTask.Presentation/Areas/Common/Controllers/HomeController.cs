@@ -21,12 +21,14 @@
         public HomeController(ITourService tourService)
         {
             this.tourService = tourService;
+            Mapper.CreateMap<TourDto, TourViewModel>();
+            Mapper.CreateMap<TourDto, TourPreviewViewModel>();
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
-            Mapper.CreateMap<TourDto, TourViewModel>();
-            return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours()));
+            return this.View(Mapper.Map<List<TourPreviewViewModel>>(this.tourService.GetAllTours()));
         }
 
         public ActionResult ChangeCulture(string lang)
@@ -50,6 +52,12 @@
             }
             this.Response.Cookies.Add(cookie);
             return this.Redirect(returnUrl);
+        }
+
+        [HttpGet]
+        public ActionResult TourDetails(int id)
+        {
+            return this.View(Mapper.Map<TourViewModel>(this.tourService.GetTour(id)));
         }
     }
 }

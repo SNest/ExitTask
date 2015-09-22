@@ -117,20 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AddTour" xml:space="preserve">
+    <value>Добавить тур</value>
+  </data>
+  <data name="ArrivalDate" xml:space="preserve">
+    <value>Дата прибытия</value>
+  </data>
   <data name="Avatar" xml:space="preserve">
     <value>Аватар</value>
   </data>
-  <data name="BeginArrivalTime" xml:space="preserve">
-    <value>Начальная дата прибытия</value>
+  <data name="Capital" xml:space="preserve">
+    <value>Столица</value>
   </data>
-  <data name="BeginDepartureTime" xml:space="preserve">
-    <value>Начальная дата отъезда</value>
+  <data name="Cencel" xml:space="preserve">
+    <value>Отмена</value>
   </data>
   <data name="Cities" xml:space="preserve">
     <value>Города</value>
   </data>
   <data name="City" xml:space="preserve">
     <value>Город</value>
+  </data>
+  <data name="Climate" xml:space="preserve">
+    <value>Климат</value>
   </data>
   <data name="Countries" xml:space="preserve">
     <value>Страны</value>
@@ -144,11 +156,32 @@
   <data name="CultureLink" xml:space="preserve">
     <value>Укр. / Рус.</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
   <data name="Customer" xml:space="preserve">
     <value>Клиент</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DeleteTour" xml:space="preserve">
+    <value>Удалить тур</value>
+  </data>
+  <data name="DepartureDate" xml:space="preserve">
+    <value>Дата отъезда</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Описание</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="EditTour" xml:space="preserve">
+    <value>Редактировать тур</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Почта</value>
@@ -162,12 +195,6 @@
   <data name="EmailUnique" xml:space="preserve">
     <value />
   </data>
-  <data name="EndArrivalTime" xml:space="preserve">
-    <value>Конечная дата прибытия</value>
-  </data>
-  <data name="EndDepartureTime" xml:space="preserve">
-    <value>Конечная дата отъезда</value>
-  </data>
   <data name="Feeding" xml:space="preserve">
     <value>Питание</value>
   </data>
@@ -177,6 +204,9 @@
   <data name="FirstName" xml:space="preserve">
     <value>Имя</value>
   </data>
+  <data name="Geography" xml:space="preserve">
+    <value>География</value>
+  </data>
   <data name="Hotel" xml:space="preserve">
     <value>Гостиница</value>
   </data>
@@ -185,6 +215,9 @@
   </data>
   <data name="Image" xml:space="preserve">
     <value>Изображение</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Фамилия</value>
@@ -218,6 +251,12 @@
   </data>
   <data name="Picture" xml:space="preserve">
     <value>Картинка</value>
+  </data>
+  <data name="PoliticalStructure" xml:space="preserve">
+    <value>Политическая структура</value>
+  </data>
+  <data name="Population" xml:space="preserve">
+    <value>Население</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Цена</value>
@@ -255,6 +294,12 @@
   <data name="State" xml:space="preserve">
     <value>Состояние</value>
   </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Временная зона</value>
+  </data>
+  <data name="TourList" xml:space="preserve">
+    <value>Список туров</value>
+  </data>
   <data name="Tours" xml:space="preserve">
     <value>Туры</value>
   </data>
@@ -263,5 +308,8 @@
   </data>
   <data name="UniqueCountyName" xml:space="preserve">
     <value>Страна с таким названием уже есть в базе</value>
+  </data>
+  <data name="Worship" xml:space="preserve">
+    <value>Вероисповедание</value>
   </data>
 </root>
