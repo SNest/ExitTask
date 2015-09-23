@@ -16,3 +16,6 @@ C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Ap
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Application\obj\Debug\ExitTask.Application.csprojResolveAssemblyReference.cache
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Application\obj\Debug\ExitTask.Application.dll
 C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Application\obj\Debug\ExitTask.Application.pdb
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Application\bin\Debug\ExitTask.Application.dll.config
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Application\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sergey\OneDrive\Development\Visual Studio\Projects\ExitTask\ExitTask.Application\bin\Debug\EntityFramework.SqlServer.xml

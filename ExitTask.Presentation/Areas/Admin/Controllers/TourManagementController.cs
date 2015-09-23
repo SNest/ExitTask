@@ -28,6 +28,7 @@
             this.cityService = cityService;
             this.hotelService = hotelService;
             Mapper.CreateMap<TourViewModel, TourDto>();
+            Mapper.CreateMap<TourDto, TourViewModel>();
         }
 
         [HttpGet]
@@ -102,8 +103,9 @@
         [HttpGet]
         public ActionResult ShowBookedTours()
         {
-            var bookedTours = tourService.GetBookedTours();
-            return this.View();
+            var bookedTours = this.tourService.GetBookedTours();
+            var model = Mapper.Map<IEnumerable<Common.Models.TourViewModel>>(bookedTours);
+            return this.View(model);
         }
 
         [HttpPost]

@@ -117,8 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="AddTour" xml:space="preserve">
+    <value>Додати тур</value>
+  </data>
+  <data name="ArrivalDate" xml:space="preserve">
+    <value>дата прибуття</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>Аватар</value>
+  </data>
+  <data name="Book" xml:space="preserve">
+    <value>Забронювати</value>
+  </data>
+  <data name="BookedTours" xml:space="preserve">
+    <value>Зареєстровані тури</value>
+  </data>
+  <data name="Capital" xml:space="preserve">
+    <value>Столиця</value>
+  </data>
+  <data name="Cencel" xml:space="preserve">
+    <value>Скасування</value>
+  </data>
+  <data name="ChangeState" xml:space="preserve">
+    <value>Змінити стан</value>
+  </data>
+  <data name="Cities" xml:space="preserve">
+    <value>Міста</value>
+  </data>
   <data name="City" xml:space="preserve">
     <value>Місто</value>
+  </data>
+  <data name="Climate" xml:space="preserve">
+    <value>Клімат</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Країни</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>Країна</value>
@@ -129,11 +165,32 @@
   <data name="CultureLink" xml:space="preserve">
     <value>Укр. / Рус.</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
   <data name="Customer" xml:space="preserve">
-    <value>Клиент</value>
+    <value>Клієнт</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="DeleteTour" xml:space="preserve">
+    <value>Видалити тур</value>
+  </data>
+  <data name="DepartureDate" xml:space="preserve">
+    <value>Дата від'їзду</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Опис</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Детальніше</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
+  <data name="EditTour" xml:space="preserve">
+    <value>Редагувати тур</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Пошта</value>
@@ -141,14 +198,56 @@
   <data name="EmailConfirmation" xml:space="preserve">
     <value>Підтвердіть пошту</value>
   </data>
+  <data name="EmailConfirmationFail" xml:space="preserve">
+    <value>Поштові скриньки не збігаються</value>
+  </data>
+  <data name="EmailUnique" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Feeding" xml:space="preserve">
+    <value>Харчування</value>
+  </data>
+  <data name="Filtr" xml:space="preserve">
+    <value>Фільтрувати</value>
+  </data>
+  <data name="Filtration" xml:space="preserve">
+    <value>Фільтрація</value>
+  </data>
+  <data name="FinishCity" xml:space="preserve">
+    <value>Кінцевий місто</value>
+  </data>
   <data name="FirstName" xml:space="preserve">
     <value>Ім'я</value>
+  </data>
+  <data name="Geography" xml:space="preserve">
+    <value>Географія</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Готель</value>
+  </data>
+  <data name="Hotels" xml:space="preserve">
+    <value>Готелі</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Зображення</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Мова</value>
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Прізвище</value>
   </data>
   <data name="Mainland" xml:space="preserve">
     <value>Частина світу</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Управління</value>
+  </data>
+  <data name="MaxStringLengthFail" xml:space="preserve">
+    <value>Задовгий рядок</value>
+  </data>
+  <data name="MinStringLengthFail" xml:space="preserve">
+    <value>Рядок занадто коротка</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Назва</value>
@@ -159,20 +258,44 @@
   <data name="PasswordConfirmation" xml:space="preserve">
     <value>Підтвердіть пароль</value>
   </data>
+  <data name="PasswordConfirmationFail" xml:space="preserve">
+    <value>Паролі не співпадають</value>
+  </data>
+  <data name="PersonNumber" xml:space="preserve">
+    <value>Кількість осіб</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Картинка</value>
+  </data>
+  <data name="PoliticalStructure" xml:space="preserve">
+    <value>Політична структура</value>
+  </data>
+  <data name="Population" xml:space="preserve">
+    <value>Населення</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Ціна</value>
+  </data>
   <data name="RequiredDescription" xml:space="preserve">
     <value>Поле "Опис" є обов'язковим</value>
   </data>
   <data name="RequiredField" xml:space="preserve">
     <value>Це поле є обов'язковим</value>
   </data>
+  <data name="RequiredLastName" xml:space="preserve">
+    <value />
+  </data>
   <data name="RequiredName" xml:space="preserve">
     <value>Поле "Ім'я" є обов'язковим</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>Роль</value>
+  </data>
   <data name="Sex" xml:space="preserve">
-    <value>Стать</value>
+    <value>Підлога</value>
   </data>
   <data name="SignIn" xml:space="preserve">
-    <value>Увійти</value>
+    <value>Ввійти</value>
   </data>
   <data name="SignOut" xml:space="preserve">
     <value>Вийти</value>
@@ -183,10 +306,31 @@
   <data name="Stars" xml:space="preserve">
     <value>Кількість зірок</value>
   </data>
+  <data name="StartCity" xml:space="preserve">
+    <value>Початкове місто</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Стан</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Часовий пояс</value>
+  </data>
+  <data name="TourList" xml:space="preserve">
+    <value>Список турів</value>
+  </data>
+  <data name="Tours" xml:space="preserve">
+    <value>Тури</value>
+  </data>
   <data name="Type" xml:space="preserve">
     <value>Тип</value>
   </data>
   <data name="UniqueCountyName" xml:space="preserve">
     <value>Країна з такою назвою вже є в базі</value>
+  </data>
+  <data name="UserInfo" xml:space="preserve">
+    <value>Мій профіль</value>
+  </data>
+  <data name="Worship" xml:space="preserve">
+    <value>Віросповідання</value>
   </data>
 </root>

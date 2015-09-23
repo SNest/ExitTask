@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Web;
     using System.Web.Mvc;
 
@@ -9,6 +10,7 @@
 
     using ExitTask.Application.ApplicationServices.Abstract;
     using ExitTask.Application.DTOs.Concrete;
+    using ExitTask.Application.DTOs.Concrete.Enum;
     using ExitTask.Presentation.Areas.Common.Models;
     using ExitTask.Presentation.Filters;
 
@@ -28,7 +30,11 @@
         [HttpGet]
         public ActionResult Index()
         {
-            return this.View(Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours()));
+            var tours = Mapper.Map<List<TourViewModel>>(this.tourService.GetAllTours());
+            var model =
+                tours.Where(tour => tour.State != TourDtoState.Booked && tour.State != TourDtoState.Paid)
+                    .OrderBy(tour => tour.State);
+            return this.View(model);
         }
 
         public ActionResult ChangeCulture(string lang)
@@ -58,6 +64,13 @@
         public ActionResult TourDetails(int id)
         {
             return this.View(Mapper.Map<TourViewModel>(this.tourService.GetTour(id)));
+        }
+
+        [HttpPost]
+        public ActionResult FiltrTours(TourViewModel model)
+        {
+
+            return this.View(Mapper.Map<TourViewModel>(this.tourService.GetAllTours()));
         }
     }
 }

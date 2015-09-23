@@ -12,6 +12,8 @@
 
         IEnumerable<TourDto> GetAllTours();
 
+        IEnumerable<TourDto> GetBookedTours();
+
         IEnumerable<TourDto> FindTours(Func<TourDto, bool> predicate);
 
         TourDto GetTour(int id);

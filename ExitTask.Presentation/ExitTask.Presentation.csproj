@@ -146,7 +146,6 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Common\Views\web.config" />
-    <Content Include="Areas\Payment\Views\web.config" />
     <Content Include="Areas\Security\Views\web.config" />
     <Content Include="Areas\User\Views\web.config" />
     <Content Include="Areas\Common\Views\_ViewStart.cshtml" />
@@ -174,6 +173,7 @@
     <Content Include="Content\fonts\RobotoDraftRegular.woff" />
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
     <Content Include="Areas\User\Views\UserProfile\UserInfo.cshtml" />
+    <Content Include="Areas\Admin\Views\TourManagement\ShowBookedTours.cshtml" />
     <None Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -203,11 +203,11 @@
     <Compile Include="Areas\Admin\Models\HotelViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TourViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TourListViewModel.cs" />
+    <Compile Include="Areas\Common\Models\FilterTourViewModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Areas\Admin\Validators\CountryViewModelValidator.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
     <Compile Include="Areas\Common\Models\TourPreviewViewModel.cs" />
-    <Compile Include="Areas\Payment\PaymentAreaRegistration.cs" />
     <Compile Include="Areas\Security\Controllers\AuthorizationController.cs" />
     <Compile Include="Areas\Security\Controllers\RegistrationController.cs" />
     <Compile Include="Areas\Security\Models\UserAuthorizationViewModel.cs" />
@@ -276,9 +276,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\UserManagement\" />
-    <Folder Include="Areas\Payment\Controllers\" />
-    <Folder Include="Areas\Payment\Models\" />
-    <Folder Include="Areas\Payment\Views\Shared\" />
     <Folder Include="Areas\Security\Views\Shared\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Booking\" />

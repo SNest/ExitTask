@@ -2,7 +2,6 @@
 {
     using System;
     using System.Globalization;
-    using System.Security.Cryptography;
     using System.Web.Mvc;
 
     using ExitTask.Application.DTOs.Concrete.Enum;
@@ -12,10 +11,15 @@
 
     public static class CardHelper
     {
-        public static MvcHtmlString TourPreviewCard(this HtmlHelper htmlHelper, TourViewModel tourPreview)
+        public static MvcHtmlString TourPreviewCard(this HtmlHelper htmlHelper, TourViewModel tourPreview, int counter)
         {
             var card = new TagBuilder("div");
-            card.MergeAttribute("class", "demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col");
+
+            card.MergeAttribute(
+                "class",
+                counter == 0
+                    ? "demo-card-square3 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col"
+                    : "demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col");
 
             var title = new TagBuilder("div");
             title.MergeAttribute("class", "mdl-card__title mdl-card--expand");

@@ -51,6 +51,20 @@ label {
     height: 100%;
 }
 
+.demo-card-square-3.mdl-card {
+    width: 580px;
+    height: 100%;
+}
+
+.filtr-form {
+    margin: 0 auto;
+}
+
+.filter-card.mdl-card {
+    width: 400px;
+    height: 100%;
+}
+
 .desc-lable {
     float: left
 }

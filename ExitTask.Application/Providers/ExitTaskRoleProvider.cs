@@ -5,14 +5,13 @@
     using System.Web.Security;
 
     using ExitTask.Domain.Abstract.UnitOfWork;
+    using ExitTask.Infrastructure.Concrete.UnitOfWork;
+    using ExitTask.Infrastructure.Context.Concrete;
 
-    using Ninject;
 
     public class ExitTaskRoleProvider : RoleProvider
     {
-        [Inject]
-        private IUnitOfWork unitOfWork { get; set; }
-
+        private readonly IUnitOfWork unitOfWork = new EfUnitOfWork(new EfContext("DbConnection"));
         public override string[] GetRolesForUser(string email)
         {
             var role = this.unitOfWork.Users.GetAll().FirstOrDefault(u => u.Email == email);
@@ -22,7 +21,7 @@
         }
 
         #region NotImplemented
-
+       
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)
         {
             throw new NotImplementedException();

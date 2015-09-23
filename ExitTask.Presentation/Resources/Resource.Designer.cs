@@ -106,6 +106,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Зарегистрированные туры.
+        /// </summary>
+        public static string BookedTours {
+            get {
+                return ResourceManager.GetString("BookedTours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Столица.
         /// </summary>
         public static string Capital {
@@ -120,6 +129,15 @@ namespace Resources {
         public static string Cencel {
             get {
                 return ResourceManager.GetString("Cencel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Изменить состояние.
+        /// </summary>
+        public static string ChangeState {
+            get {
+                return ResourceManager.GetString("ChangeState", resourceCulture);
             }
         }
         
@@ -309,6 +327,24 @@ namespace Resources {
         public static string Feeding {
             get {
                 return ResourceManager.GetString("Feeding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фильтровать.
+        /// </summary>
+        public static string Filtr {
+            get {
+                return ResourceManager.GetString("Filtr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Фильтрация.
+        /// </summary>
+        public static string Filtration {
+            get {
+                return ResourceManager.GetString("Filtration", resourceCulture);
             }
         }
         

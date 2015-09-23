@@ -8,10 +8,10 @@
         None = 0,
 
         [Display(Name = "Обычный")]
-        Normal = 1,
+        Hot = 1,
 
         [Display(Name = "Горящий")]
-        Hot = 2,
+        Normal = 2,
 
         [Display(Name = "Зарегистрированный")]
         Booked = 3,

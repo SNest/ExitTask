@@ -132,11 +132,17 @@
   <data name="Book" xml:space="preserve">
     <value>Забронировать</value>
   </data>
+  <data name="BookedTours" xml:space="preserve">
+    <value>Зарегистрированные туры</value>
+  </data>
   <data name="Capital" xml:space="preserve">
     <value>Столица</value>
   </data>
   <data name="Cencel" xml:space="preserve">
     <value>Отмена</value>
+  </data>
+  <data name="ChangeState" xml:space="preserve">
+    <value>Изменить состояние</value>
   </data>
   <data name="Cities" xml:space="preserve">
     <value>Города</value>
@@ -200,6 +206,12 @@
   </data>
   <data name="Feeding" xml:space="preserve">
     <value>Питание</value>
+  </data>
+  <data name="Filtr" xml:space="preserve">
+    <value>Фильтровать</value>
+  </data>
+  <data name="Filtration" xml:space="preserve">
+    <value>Фильтрация</value>
   </data>
   <data name="FinishCity" xml:space="preserve">
     <value>Конечный город</value>

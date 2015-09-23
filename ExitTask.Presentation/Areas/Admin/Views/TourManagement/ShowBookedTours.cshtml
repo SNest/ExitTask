@@ -1,0 +1,69 @@
+﻿@using Resources
+@model List<ExitTask.Presentation.Areas.Common.Models.TourViewModel>
+
+@{
+    this.ViewBag.Title = "ShowBookedTours";
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tour-grid mdl-grid mdl-cell--1-col mdl-cell--8-col">
+    <div class="add-tour-card mdl-card mdl-shadow--16dp mdl-cell mdl-cell--8-col mdl-color-text--blue-grey-800">
+        <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--grey-700">
+            <h4>@Resource.BookedTours</h4>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @(this.Html.DisplayName(Resource.Name))
+                </th>
+
+                <th>
+                    @(this.Html.DisplayName(Resource.PersonNumber))
+                </th>
+                <th>
+                    @(this.Html.DisplayName(Resource.Price))
+                </th>
+
+                <th>
+                    @(this.Html.DisplayName(Resource.StartCity))
+                </th>
+                <th>
+                    @(this.Html.DisplayName(Resource.FinishCity))
+                </th>
+
+                <th>
+                    @(this.Html.DisplayName(Resource.State))
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in this.Model)
+            {
+                <tr>
+                    <td>
+                        @(this.Html.DisplayFor(modelItem => item.Name))
+                    </td>
+
+                    <td>
+                        @(this.Html.DisplayFor(modelItem => item.PersonNumber))
+                    </td>
+                    <td>
+                        @(this.Html.DisplayFor(modelItem => item.Price))
+                    </td>
+                    <td>
+                        @(this.Html.DisplayFor(modelItem => item.StartCity.Name))
+                    </td>
+                    <td>
+                        @(this.Html.DisplayFor(modelItem => item.FinishCity.Name))
+                    </td>
+                    <td>
+                        @(this.Html.DisplayFor(modelItem => item.State))
+                    </td>
+                    <td>
+                        @(this.Html.ActionLink(Resource.ChangeState, "Edit", new { id = item.Id })) 
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

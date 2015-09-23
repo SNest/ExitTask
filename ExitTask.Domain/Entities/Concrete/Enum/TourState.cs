@@ -4,9 +4,9 @@
     {
         None = 0,
 
-        Normal = 1,
+        Hot = 1,
 
-        Hot = 2,
+        Normal = 2,
 
         Booked = 3,
 
