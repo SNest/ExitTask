@@ -41,6 +41,11 @@
             var result = Mapper.Map<UserDto>(this.unitOfWork.Entities<User, int>().Get(id));
             return result;
         }
+        public UserDto GetUser(string email)
+        {
+            var result = Mapper.Map<UserDto>(this.unitOfWork.Entities<User, int>().Find(country => country.Email == email).FirstOrDefault());
+            return result;
+        }
 
         public void CreateUser(UserDto input)
         {

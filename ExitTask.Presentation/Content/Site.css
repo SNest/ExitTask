@@ -13,6 +13,9 @@
     margin: 0 auto;
     flex-shrink: 0;
 }
+h4 {
+    margin-left: 35px;
+}
 
 .tour-detail-grid {
 }
@@ -32,6 +35,11 @@ label {
 
 .add-tour-card.mdl-card {
     width: 900px;
+    height: 100%;
+}
+
+.user-info-card.mdl-card {
+    width: 350px;
     height: 100%;
 }
 .demo-card-square > .mdl-card__title {
@@ -75,18 +83,24 @@ textarea, select {
     padding: 15px;
 }*/
 
-/*.mdl-layout__content {
+.mdl-layout__content {
     display: -webkit-flex;
 	display: flex;
     -webkit-flex-direction: column;
 	        flex-direction: column;
-}*/
+}
 
 footer {
     width: 100%;
     height: 100px;
-    color: white;
-    background-color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 32px 16px;
+
 }
 
 @font-face {

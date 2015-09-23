@@ -180,7 +180,7 @@
                 lState + pState + lPrice + pPrice + lFinishCityName + pFinishCityName +
                 lFinishCityDesc + pFinishCityDesc;
 
-            card.InnerHtml = title.ToString() + description;
+            card.InnerHtml = title.ToString() + description + book;
 
             return MvcHtmlString.Create(card.ToString());
         }

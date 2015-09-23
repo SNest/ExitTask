@@ -276,6 +276,9 @@
   <data name="RequiredName" xml:space="preserve">
     <value>Поле "Имя" является обязательным</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>Роль</value>
+  </data>
   <data name="Sex" xml:space="preserve">
     <value>Пол</value>
   </data>
@@ -311,6 +314,9 @@
   </data>
   <data name="UniqueCountyName" xml:space="preserve">
     <value>Страна с таким названием уже есть в базе</value>
+  </data>
+  <data name="UserInfo" xml:space="preserve">
+    <value>Мой профиль</value>
   </data>
   <data name="Worship" xml:space="preserve">
     <value>Вероисповедание</value>

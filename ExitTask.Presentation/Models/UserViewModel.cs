@@ -1,8 +1,7 @@
-﻿namespace ExitTask.Presentation.Areas.Admin.Models
+﻿namespace ExitTask.Presentation.Models
 {
     using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Application.DTOs.Concrete.Enum;
-    using ExitTask.Presentation.Models;
 
     public class UserViewModel : ViewModel<int>
     {

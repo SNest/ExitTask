@@ -10,6 +10,7 @@
     using AutoMapper;
 
     using ExitTask.Application.ApplicationServices.Abstract;
+    using ExitTask.Application.ApplicationServices.Concrete;
     using ExitTask.Application.DTOs.Concrete;
     using ExitTask.Presentation.Areas.Admin.Models;
 
@@ -99,8 +100,9 @@
         }
 
         [HttpGet]
-        public ActionResult Update()
+        public ActionResult ShowBookedTours()
         {
+            var bookedTours = tourService.GetBookedTours();
             return this.View();
         }
 

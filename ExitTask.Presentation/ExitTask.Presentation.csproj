@@ -173,6 +173,7 @@
     <Content Include="Content\fonts\RobotoDraftMedium.woff2" />
     <Content Include="Content\fonts\RobotoDraftRegular.woff" />
     <Content Include="Content\fonts\RobotoDraftRegular.woff2" />
+    <Content Include="Areas\User\Views\UserProfile\UserInfo.cshtml" />
     <None Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -196,12 +197,13 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\GeoManagementController.cs" />
     <Compile Include="Areas\Admin\Controllers\TourManagementController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserManagementController.cs" />
     <Compile Include="Areas\Admin\Models\CityViewModel.cs" />
     <Compile Include="Areas\Admin\Models\CountryViewModel.cs" />
     <Compile Include="Areas\Admin\Models\HotelViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TourViewModel.cs" />
     <Compile Include="Areas\Admin\Models\TourListViewModel.cs" />
-    <Compile Include="Areas\Admin\Models\UserViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Areas\Admin\Validators\CountryViewModelValidator.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
     <Compile Include="Areas\Common\Models\TourPreviewViewModel.cs" />
@@ -213,6 +215,8 @@
     <Compile Include="Areas\Security\SecurityAreaRegistration.cs" />
     <Compile Include="Areas\Security\Validators\UserAuthorizationViewModelValidator.cs" />
     <Compile Include="Areas\Security\Validators\UserRegistrationViewModelValidator.cs" />
+    <Compile Include="Areas\User\Controllers\BookingController.cs" />
+    <Compile Include="Areas\User\Controllers\UserProfileController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Areas\Common\Controllers\HomeController.cs" />
     <Compile Include="Filters\CultureAttribute.cs" />
@@ -271,12 +275,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\UserManagement\" />
     <Folder Include="Areas\Payment\Controllers\" />
     <Folder Include="Areas\Payment\Models\" />
     <Folder Include="Areas\Payment\Views\Shared\" />
     <Folder Include="Areas\Security\Views\Shared\" />
-    <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Booking\" />
     <Folder Include="Areas\User\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

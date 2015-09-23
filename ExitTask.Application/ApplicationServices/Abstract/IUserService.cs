@@ -13,6 +13,8 @@
 
         UserDto GetUser(int id);
 
+        UserDto GetUser(string email);
+
         void CreateUser(UserDto input);
 
         void UpdateUser(UserDto input);

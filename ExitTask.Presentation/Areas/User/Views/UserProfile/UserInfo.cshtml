@@ -1,0 +1,58 @@
+﻿@using Resources
+@model ExitTask.Presentation.Models.UserViewModel
+
+@{
+    this.ViewBag.Title = "UserInfo";
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tour-grid mdl-grid mdl-cell--1-col mdl-cell--2-col">
+    <div class="user-info-card mdl-card mdl-shadow--16dp mdl-cell mdl-cell--2-col mdl-color-text--grey-800">
+        <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--grey-700">
+            <h4>@Resource.UserInfo</h4>
+        </div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @(this.Html.DisplayName(Resources.Resource.FirstName))
+                </dt>
+
+                <dd>
+                    @(this.Html.DisplayFor(model => model.FirstName))
+                </dd>
+
+                <dt>
+                    @(this.Html.DisplayName(Resources.Resource.LastName))
+                </dt>
+
+                <dd>
+                    @(this.Html.DisplayFor(model => model.LastName))
+                </dd>
+
+                <dt>
+                    @(this.Html.DisplayName(Resources.Resource.Email))
+                </dt>
+
+                <dd>
+                    @(this.Html.DisplayFor(model => model.Email))
+                </dd>
+
+                <dt>
+                    @(this.Html.DisplayName(Resources.Resource.Sex))
+                </dt>
+
+                <dd>
+                    @(this.ViewBag.UserSex)
+                </dd>
+
+                <dt>
+                    @(this.Html.DisplayName(Resources.Resource.Role))
+                </dt>
+
+                <dd>
+                    @(this.ViewBag.UserRole)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+

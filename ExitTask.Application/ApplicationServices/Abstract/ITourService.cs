@@ -8,6 +8,7 @@
     public interface ITourService : IAppService
     {
         IEnumerable<TourPreviewDto> GetTourPreviews();
+        IEnumerable<TourDto> GetToursByUserId(int id);
 
         IEnumerable<TourDto> GetAllTours();
 

@@ -39,6 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -77,8 +78,6 @@
     <Compile Include="DTOs\Concrete\TourDto.cs" />
     <Compile Include="DTOs\Concrete\TourPreviewDto.cs" />
     <Compile Include="DTOs\Concrete\UserDto.cs" />
-    <Compile Include="Mapping\Destination.cs" />
-    <Compile Include="Mapping\Source.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ExitTaskMembershipProvider.cs" />
     <Compile Include="Providers\ExitTaskRoleProvider.cs" />
